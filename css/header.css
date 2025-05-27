@@ -131,3 +131,43 @@ nav ul li a:hover::after {
     padding: 1rem;
   }
 }
+
+/* Menú desplegable */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--fondo);
+    min-width: 180px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    z-index: 1001;
+    border-radius: 0 0 8px 8px;
+    padding: 0.5rem 0;
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu li a {
+    color: var(--color_texto);
+    padding: 0.7rem 1.2rem;
+    display: block;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.dropdown-menu li a:hover {
+    color: var(--hover_texto);
+}
+
+/* Mostrar menú al pasar el mouse o hacer click */
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+    display: block;
+}
