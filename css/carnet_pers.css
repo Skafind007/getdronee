@@ -10,30 +10,123 @@ body {
     min-height: 100vh;
     color: #222;
 }
-        .top-container {
-            width: 100%;
-            height: 320px;
-            position: relative;
-            background: transparent;
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-start;
-            overflow: visible;
-        }
-        .profile-img-container {
-            position: absolute;
-            left: 48px;
-            bottom: 32px;
-            z-index: 3;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 28px;
-            background: rgba(30,30,30,0.75);
-            padding: 18px 36px 18px 18px;
-            border-radius: 32px;
-            box-shadow: 0 4px 32px #0004;
-        }
+        /* --- ESTILO BASE: ESCRITORIO (izquierda) --- */
+.top-container {
+    width: 100%;
+    min-height: 120px;
+    box-sizing: border-box;
+    height: 320px;
+    position: relative;
+    background: transparent;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    overflow: visible;
+}
+.profile-img-container {
+    position: absolute;
+    left: 48px;
+    bottom: 32px;
+    z-index: 3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 28px;
+    background: rgba(30,30,30,0.75);
+    padding: 18px 36px 18px 18px;
+    border-radius: 32px;
+    box-shadow: 0 4px 32px #0004;
+    text-align: left;
+}
+
+/* --- RESPONSIVE: CENTRADO Y BAJO EL HEADER --- */
+@media (max-width: 900px) {
+    .top-container {
+        height: auto !important;
+        min-height: 0 !important;
+        justify-content: center;
+        align-items: flex-end;
+        margin-top: 0 !important;
+    }
+    .profile-img-container {
+        position: static !important;
+        left: auto !important;
+        bottom: auto !important;
+        transform: none !important;
+        margin: 120px auto 0 auto !important; /* Espacio bajo el header */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        padding: 16px 10px 12px 10px;
+        width: 95vw;
+        max-width: 340px;
+        border-radius: 22px;
+        box-shadow: 0 2px 12px #0002;
+        text-align: center;
+    }
+    .cv-name, .cv-title {
+        text-align: center;
+    }
+    .gallery-img-slider {
+        width: 320px;
+        height: 200px;
+    }
+}
+
+/* --- MÓVIL: MÁS ESPACIO Y AJUSTES DE TAMAÑO --- */
+@media (max-width: 600px) {
+    .top-container {
+        height: auto !important;
+        min-height: 0 !important;
+        margin-top: 0 !important;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .profile-img-container {
+        margin: 100px auto 0 auto !important;
+        padding: 12px 6px 8px 6px;
+        gap: 10px;
+        width: 98vw;
+        max-width: 98vw;
+    }
+    .profile-img {
+        width: 60px;
+        height: 60px;
+    }
+    .cv-name { font-size: 1em; }
+    .cv-title { font-size: 0.9em; }
+    .gallery-img-slider {
+        width: 95vw;
+        height: 120px;
+        min-width: 0;
+        min-height: 0;
+    }
+    .left-col, .right-col {
+        padding: 16px 8px 12px 8px;
+    }
+}
+
+/* --- EXTRA PEQUEÑO --- */
+@media (max-width: 400px) {
+    .profile-img-container {
+        margin: 80px auto 0 auto !important;
+        padding: 8px 2px 6px 2px;
+        gap: 6px;
+        width: 99vw;
+        max-width: 99vw;
+    }
+    .profile-img {
+        width: 48px;
+        height: 48px;
+    }
+    .cv-name { font-size: 0.85em; }
+    .cv-title { font-size: 0.75em; }
+    .gallery-img-slider {
+        width: 98vw;
+        height: 80px;
+    }
+}
         .profile-img {
             width: 120px;
             height: 120px;
@@ -287,20 +380,29 @@ body {
             .main-columns {
                 flex-direction: column;
                 gap: 24px;
-                margin-top: 40px;
-                padding: 0 8vw 24px 8vw;
+                margin-top: 60px;
+                padding: 0 8vw 20px 8vw;
             }
             .left-col, .right-col {
                 max-width: 98vw;
                 margin: 0 auto;
             }
             .profile-img-container {
-                left: 50%;
-                transform: translateX(-50%);
-                align-items: center;
-                flex-direction: column;
-                gap: 12px;
-                padding: 12px 12px 12px 12px;
+                position: static !important;
+        left: auto !important;
+        bottom: auto !important;
+        transform: none !important;
+        margin: 0 auto !important;
+        margin-top: 7rem !important; /* Espacio para el header */
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        padding-bottom: 12px;
+        width: 90vw;
+        max-width: 360px;
+        border-radius: 22px;
+        box-shadow: 0 2px 10px #0002;
+        text-align: center;
             }
             .cv-name, .cv-title {
                 text-align: center;
@@ -311,6 +413,13 @@ body {
             }
         }
         @media (max-width: 600px) {
+            .top-container {
+        height: auto !important;
+        min-height: 0 !important;
+        margin-top: 0 !important;
+        justify-content: center;
+        align-items: flex-end;
+    }
             .top-container { height: 120px; }
             .profile-img { width: 60px; height: 60px; }
             .main-columns { padding: 0 2vw 16px 2vw; }
@@ -323,8 +432,9 @@ body {
             .profile-img-container { 
                 left: 50%; 
                 transform: translateX(-50%); 
-                padding: 8px 8px 8px 8px;
+                padding: 8px;
                 gap: 8px;
+                margin: 100px auto 0 auto !important;
             }
             .cv-name { font-size: 1em; }
             .cv-title { font-size: 0.9em; }
@@ -395,4 +505,9 @@ body {
     bottom: 15px;
     right: 15px;
   }
+}
+@media (max-width: 900px) and (min-width: 601px) {
+    .profile-img-container {
+        padding-top: 180px !important; /* Ajusta este valor según el alto real de tu header */
+    }
 }
