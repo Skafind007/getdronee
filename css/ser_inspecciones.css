@@ -1,45 +1,278 @@
-/* Reset */
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+:root{
+    --fondo_index: #ffffff;
+    --color_texto_index: #ffff;
+    --color_texto_slider: #ffffff;
+    --hover_texto: #c79415;
+    --hover_claro: #f0c14b;
+    --header-text-color: #fff;
+    --color_texto: #333;
+    --fondo_oscuro: #000000;
+    --fuente_principal: 'Montserrat', sans-serif;
+  }
 
+
+/* Reset */
   * {
     margin: 0; padding: 0; box-sizing: border-box;
   }
   body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--fuente_principal);
     background: var(--fondo_index);
     color:var(--color_texto);
     width: 100%;
   }
-
-
+body {
+    overflow-x: hidden;
+}
+  main {
+    margin-top: 90px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+section{
+    padding: 0 ;
+}
 .hero {
     position: relative;
-    max-width: 100%; /* Cambia de 100% a 100vh */
+    min-height: 100vh;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
 }
 
-.hero-video-bg {
+.hero-image-bg {
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%; /* Ajusta a 100vw y 100vh */
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
     z-index: 1;
     overflow: hidden;
 }
 
-.hero-video-bg video {
-    width: 100%;
-    height: 100%;
+.hero-image-bg img {
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
-    filter: brightness(0.7);
+    object-position: center; /* <-- Centra la imagen en todos los tamaños */
+    filter: brightness(0.5);
+    display: block;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    color: #fff;
+    color:var(--color_texto_index);
     text-align: center;
-    max-width: 700px;
-    margin: 0 auto;
+    width: 100%;
 }
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.8rem;
+    font-style: bold;
+    margin: 4rem;
+}
+
+@media (max-width: 600px) {
+    .hero,
+    .hero-image-bg,
+    .hero-image-bg img {
+        height: 60vh;
+        min-height: 320px;
+        max-height: 100vh;
+    }
+    .hero-content {
+        padding: 2rem 1rem;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-content p {
+        font-size: 1.2rem;
+        margin: 2rem 0;
+    }
+}
+
+/*SLIDER INSPECCION EXTERNA*/
+.insp_externo{
+    background:var(--fondo_oscuro);
+}
+.insp_externo-titulo {
+    font-family:var(--fuente_principal);
+    padding-top: 2rem;
+    font-size: 2rem;
+    color: var(--color_texto_index);
+    margin-bottom: 1.8rem;
+    text-align: center;
+    display: block;
+    justify-content: center;
+}
+.insp_externo-titulo::after {
+    content: "";
+    display: block;
+    margin: 0.5rem auto 0 auto;
+    height: 3px;
+    width: 40%;
+    background: linear-gradient(90deg, var(--hover_texto), var(--hover_claro));
+    border-radius: 4px;
+}
+
+.scroll-container {
+	padding: 2rem 0rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.scroll-container .infinite-scroll-wrapper {
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+}
+
+.infinite-scroll-wrapper .infinite-scroll-content {
+	display: flex;
+	flex-direction: row;
+	white-space: nowrap;
+	animation: scroll 100s linear infinite;
+	width: 100%;
+	gap: 16px;
+}
+
+.infinite-scroll-wrapper .infinite-scroll-items {
+	display: flex;
+	flex-direction: row;
+	flex-shrink: 0;
+	gap: 16px;
+}
+
+.infinite-scroll-items .item-wrap {
+	position: relative;
+	min-width: 238px;
+	height: 400px;
+	flex-shrink: 0;
+	overflow: hidden;
+}
+
+.item-wrap img {
+	width: 100%;
+	height: 100%;
+	object-fit: center;
+    object-position: center;
+	transition: transform 0.3s ease;
+}
+
+.item-wrap .text {
+	position: absolute;
+	top: 16px;
+	left: 16px;
+	z-index: 10;
+	color:var(--color_texto_index);
+	font-weight: 500;
+    background-color: var(--hover_texto);
+    padding: 0.5rem;
+}
+
+.item-wrap:hover img {
+	transform: scale(1.05);
+}
+
+.mov-izquierda {
+    animation: scroll-left 90s linear infinite;
+}
+
+.mov-derecha {
+    animation: scroll-right 100s linear infinite;
+}
+@media (min-width: 1024px) {
+	.infinite-scroll-wrapper:hover .infinite-scroll-content {
+		animation-play-state: paused;
+	}
+}
+
+@media (max-width: 600px) {
+    .scroll-container {
+        padding-top: 2rem;
+    }
+    .infinite-scroll-wrapper .infinite-scroll-content {
+        animation: scroll 50s linear infinite;
+    }
+    .item-wrap {
+        min-width: 200px;
+        height: 300px;
+    }
+    .item-wrap .text {
+        font-size: 0.8rem;
+        padding: 0.3rem;
+    }
+    .insp_externo-titulo{
+        padding-top: 2rem;
+        margin-bottom: 0;
+    }
+    .insp_externo-titulo::after{
+        width: 80%;
+    }
+}
+
+@keyframes scroll-left {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+@keyframes scroll-right {
+	0% {
+		transform: translateX(-50%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+/* Botón flotante de WhatsApp */
+/* Agrega esto en tu CSS global o header.css */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 2.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+.whatsapp-float:hover {
+  background-color: #20ba5a;
+  color: #fff;
+  text-decoration: none;
+}
+@media (max-width: 600px) {
+  .whatsapp-float {
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+
