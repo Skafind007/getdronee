@@ -386,41 +386,6 @@
     padding: 1rem;
 }
 
-/* Botón flotante de WhatsApp */
-/* Agrega esto en tu CSS global o header.css */
-.whatsapp-float {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 25px;
-  right: 25px;
-  background-color: #25d366;
-  color: #fff;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 2.5rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  z-index: 2000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.3s;
-}
-.whatsapp-float:hover {
-  background-color: #20ba5a;
-  color: #fff;
-  text-decoration: none;
-}
-@media (max-width: 600px) {
-  .whatsapp-float {
-    width: 45px;
-    height: 45px;
-    font-size: 1.5rem;
-    bottom: 15px;
-    right: 15px;
-  }
-}
-
 /* Ajustes responsivos para preguntas frecuentes */
 @media (max-width: 900px) {
   .preguntas-frecuentes {
@@ -466,3 +431,40 @@
     padding-bottom: 0.3rem;
   }
 }
+
+/* Botón flotante de WhatsApp */
+/* Agrega esto en tu CSS global o header.css */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 2.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+.whatsapp-float:hover {
+  background-color: #20ba5a;
+  color: #fff;
+  text-decoration: none;
+}
+@media (max-width: 600px) {
+  .whatsapp-float {
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
