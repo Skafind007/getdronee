@@ -1,0 +1,132 @@
+/* Variables de archivo*/
+:root {
+  --header-height: 60px;
+  --fondo: #ffffff;
+  --hover_texto: #c79415;
+  --hover_claro:#f0c14b;
+  --header-text-color: #fff;
+  --color_texto: #333;
+}
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+
+  /* Header */
+header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background:var(--fondo);
+    padding: 1rem 2rem;
+    /*box-shadow: 0 4px 12px rgba(228, 4, 4, 0.1);*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+header .logo img {
+    height: 50px;
+    cursor: pointer;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.8rem;
+}
+nav ul li a {
+    font-weight: 600;
+    font-size: 1rem;
+    padding-bottom: 2px;
+    position: relative;
+    color:var(--color_texto);
+    transition: color 0.3s;
+    text-decoration: none;
+}
+nav ul li a.active,
+nav ul li a:hover {
+    color: var(--hover_texto);
+}
+nav ul li a.active::after,
+nav ul li a:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -4px; left: 0;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(90deg, var(--hover_texto), var(--hover_claro));
+    border-radius: 4px;
+}
+.btn-cotizacion {
+    background: linear-gradient(135deg, var(--hover_texto), var(--hover_claro));
+    border: none;
+    color: var(--fondo);
+    padding: 0.5rem 1.6rem;
+    font-weight: 700;
+    border-radius: 30px;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+.btn-cotizacion:hover {
+    transform: scale(1.05);
+}
+
+/*RESPONSIVE*/
+
+.fas {
+    font-size: 1.5rem;
+    color: var(--color_texto);
+}
+
+  .menu-toggle {
+    visibility: hidden;
+    display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--color_texto);
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+@media (max-width: 820px) {
+  nav ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--fondo);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    display: none;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    z-index: 999;
+  }
+  nav ul.show {
+    display: flex;
+  }
+  nav ul li {
+    width: 100%;
+  }
+  nav ul li a {
+    display: block;
+    padding: 1rem 2rem;
+    width: 100%;
+  }
+
+  .menu-toggle {
+    visibility: visible;
+    display: block;
+  }
+  .btn-cotizacion {
+    display: none;
+  }
+  header {
+    padding: 1rem;
+  }
+}
