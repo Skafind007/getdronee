@@ -17,6 +17,7 @@
   /* Header */
 header {
     position: fixed;
+    font-family: 'Montserrat', sans-serif;
     top: 0; left: 0; right: 0;
     background:var(--fondo);
     padding: 1rem 2rem;
