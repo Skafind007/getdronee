@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <title>Contactanos - Gadget Drone</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/formulario.css">
+</head>
+<body>
+    <header>
+    <div class="logo">
+        <img src="img/logo.jpg" alt="Gadget Drone Logo" />
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="#">Equipos</a></li>
+            <li class="dropdown">
+                <a href="#"  >Servicios ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="ser_inspecciones.html">Inspecciones</a></li>
+                    <li><a href="#">Fotogrametría</a></li>
+                    <li><a href="#">Apoyo, búsqueda y rescate, seguridad y vigilancia</a></li>
+                    <li><a href="#">Inspección y fumigación agrónomica</a></li>
+                    <li><a href="#">Capacitación</a></li>
+                    <li><a href="#">Consultoría y asesoría aeronáutica</a></li>
+                    <li><a href="#">Suministros, aeronáutico e industrial</a></li>
+                    <li><a href="#">Diseño de drones y mantenimiento</a></li>
+                </ul>
+            </li>
+            <li><a href="contactanos.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <button class="btn-cotizacion" onclick="window.location.href='formulario.html'">Obtén una cotización</button>
+    <button class="menu-toggle" aria-label="Abrir menú">
+        <i class="fas fa-bars"></i>
+    </button>
+</header>
+
+<main>
+    <section class="hero">
+    <div class="hero-image-bg">
+        <img src="img/fondo_noso.jpg" alt="Inspección con drone">
+    </div>
+    <div class="hero-content">
+        <h1>CONTACTANOS</h1>
+        <div class="hero-content_texto">
+          
+        </div>
+    </section>
+
+    <section class="contacto-section">
+  <h2 class="contacto-titulo">¡Ponte en contacto con nosotros!</h2>
+  <div class="contacto-info-cards">
+    <div class="contacto-info-card">
+      <i class="fas fa-phone"></i>
+      <div>
+        <strong>TELÉFONO</strong><br>
+        +57 300 000 0000<br>
+        +57 320 000 0000
+      </div>
+    </div>
+    <div class="contacto-info-card">
+      <i class="fas fa-map-marker-alt"></i>
+      <div>
+        <strong>DIRECCIÓN</strong><br>
+        Calle 123 #45-67<br>
+        Bogotá, Colombia
+      </div>
+    </div>
+    <div class="contacto-info-card">
+      <i class="fas fa-envelope"></i>
+      <div>
+        <strong>EMAIL</strong><br>
+        contacto@gadgetdrone.com<br>
+        info@gadgetdrone.com
+      </div>
+    </div>
+  </div>
+
+  <div class="contacto-form-container">
+    <h3 class="contacto-form-titulo">
+      SI TIENES ALGUNA PREGUNTA<br>
+      NO DUDES EN ENVIARNOS UN MENSAJE.
+    </h3>
+    <form id="contacto-form" class="contacto-form" action="https://formsubmit.co/ae65c816d622e78c7ba5467f583919dc" method="POST">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="correo" placeholder="Tu correo" required>
+      <select name="asunto" required>
+        <option value="" disabled selected>Selecciona un asunto</option>
+        <option value="equipos">Equipos</option>
+        <option value="servicios">Servicios</option>
+        <option value="otros">Otros</option>
+      </select>
+      <textarea name="mensaje" rows="4" placeholder="Mensaje" required></textarea>
+      <button type="submit">ENVIAR MENSAJE</button>
+    </form>
+  </div>
+
+  <div class="contacto-mapa">
+  <div id="mapa-personalizado" style="width:100%;height:350px;border-radius:12px;overflow:hidden;margin:2rem auto;max-width:900px;"></div>
+</div>
+</section>
+    
+</main>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-info">
+      <h3>Contacto</h3>
+      <ul>
+        <li><i class="fas fa-map-marker-alt"></i> Cll 22 A #72B- 48,Bogota,Colombia</li>
+        <li><i class="fas fa-phone"></i> +57 300 123 4567</li>
+        <li><i class="fas fa-envelope"></i>info@gadgetdrone.com</li>
+      </ul>
+    </div>
+    <div class="footer-info">
+      <h3>Enlaces rápidos</h3>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-info">
+      <h3>Síguenos</h3>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+  <p class="footer-copy">&copy; Copyright © 2025 Gadget Drone | Powered by Gadget Drone.</p>
+</footer>
+<a href="https://wa.me/573142045430" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+<div id="modal-exito" class="modal-exito">
+  <div class="modal-exito-content">
+    <span id="modal-exito-close" class="modal-exito-close">&times;</span>
+    <p>¡Mensaje enviado con éxito!</p>
+  </div>
+</div>
+<script src="js/responsive_menu.js"></script>
+<script src="js/slider_insp_externo.js"></script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+  var map = L.map('mapa-personalizado').setView([4.682184, -74.104047], 17);
+
+  // Capa oscura
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
+    subdomains: 'abcd',
+    maxZoom: 19
+  }).addTo(map);
+
+  // Marcador amarillo
+  var yellowIcon = L.icon({
+    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-yellow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowUrl: 'https://unpkg.com/leaflet@1.9.3/dist/images/marker-shadow.png',
+    shadowSize: [41, 41]
+  });
+
+  L.marker([4.682184, -74.104047], {icon: yellowIcon}).addTo(map)
+    .bindPopup('Nuestra ubicación').openPopup();
+</script>
+<script>
+document.getElementById('contacto-form').addEventListener('submit', function(e) {
+  // Permite el envío normal del formulario
+  setTimeout(function() {
+    document.getElementById('modal-exito').style.display = 'flex';
+    document.getElementById('contacto-form').reset();
+  }, 1000); // Espera 1 segundo para simular el envío
+});
+</script>
+<script>
+// Cerrar modal al hacer click en la X o fuera del contenido
+document.getElementById('modal-exito-close').onclick = function() {
+  document.getElementById('modal-exito').style.display = 'none';
+};
+window.onclick = function(event) {
+  const modal = document.getElementById('modal-exito');
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
+};
+document.querySelectorAll('.contacto-info-card i').forEach(function(icon) {
+  icon.addEventListener('click', function() {
+    icon.classList.remove('animar');
+    void icon.offsetWidth; // Reinicia la animación
+    icon.classList.add('animar');
+    setTimeout(() => icon.classList.remove('animar'), 500);
+  });
+});
+</script>
+</body>
+</html>
