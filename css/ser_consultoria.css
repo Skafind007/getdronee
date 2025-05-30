@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+:root{
+    --fondo_index: #ffffff;
+    --color_texto_index: #ffff;
+    --color_texto_slider: #ffffff;
+    --hover_texto: #c79415;
+    --hover_claro: #f0c14b;
+    --header-text-color: #fff;
+    --color_texto: #333;
+    --fondo_oscuro: #000000;
+    --fuente_principal: 'Montserrat', sans-serif;
+  }
+/* Reset */
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+  body {
+    font-family: var(--fuente_principal);
+    background: var(--fondo_index);
+    color:var(--color_texto);
+    width: 100%;
+  }
+body {
+    overflow-x: hidden;
+}
+  main {
+    margin-top: 90px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+section{
+    padding: 0 ;
+}
+
+
+/*SLIDER FUMIGACION*/
+.slider_consultoria{
+	background-color: #000;
+}
+.slider_consultoria-titulo {
+    font-family:var(--fuente_principal);
+    padding-top: 2rem;
+    font-size: 2rem;
+    color: var(--color_texto_index);
+    margin-bottom: 1.8rem;
+    text-align: center;
+    display: block;
+    justify-content: center;
+}
+.slider_consultoria-titulo::after {
+    content: "";
+    display: block;
+    margin: 0.5rem auto 0 auto;
+    height: 3px;
+    width: 50%;
+    background: linear-gradient(90deg, var(--hover_texto), var(--hover_claro));
+    border-radius: 4px;
+}
+.slider-simple {
+  position: relative;
+  width: 100vw;
+  max-width:100% ;
+  height: 68vh;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #000;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+.slider-simple .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s;
+  z-index: 1;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.slider-simple .slide.active {
+  opacity: 1;
+  z-index: 2;
+  pointer-events: auto;
+}
+.slider-simple img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center; /* Centra la imagen en todos los tamaños */
+  border-radius: 16px;
+}
+
+.slide-caption p{
+    font-size: 1.3rem;
+}
+
+.slider-simple .slide-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  padding: 1.5rem 1rem 1rem 1rem;
+  text-align: center;
+  border-radius: 0 0 16px 16px;
+}
+
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--hover_texto, #c79415);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.slider-btn:hover {
+  opacity: 1;
+}
+.slider-btn.prev { left: 16px; }
+.slider-btn.next { right: 16px; }
+@media (max-width: 600px) {
+  .services-section{
+    padding-top:0 ;
+  }
+    .slider-simple {
+    height: 35vh;
+    border-radius: 8px;
+  }
+  .slider-simple img {
+    border-radius: 8px;
+  }
+  .slider-simple .slide-caption {
+    padding: 0.7rem 0.5rem;
+    font-size: 0.9rem;
+    border-radius: 0 0 8px 8px;
+  }
+  .slider-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1.3rem;
+  }
+  .slider_busqueda-titulo {
+	font-size: 1.2rem;
+	padding-top: 1rem;
+  }
+
+  .slide-caption p{
+    font-size: 1rem;
+}
+  
+}
+
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--hover_texto, #c79415);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.slider-btn:hover {
+  opacity: 1;
+}
+.slider-btn.prev { left: 16px; }
+.slider-btn.next { right: 16px; }
+@media (max-width: 600px) {
+  .services-section{
+    padding-top:0 ;
+  }
+    .slider-simple {
+    height: 35vh;
+    border-radius: 8px;
+  }
+  .slider-simple img {
+    border-radius: 8px;
+  }
+  .slider-simple .slide-caption {
+    padding: 0.7rem 0.5rem;
+    font-size: 0.9rem;
+    border-radius: 0 0 8px 8px;
+  }
+  .slider-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1.3rem;
+  }
+  .slider_busqueda-titulo {
+	font-size: 1.2rem;
+	padding-top: 1rem;
+  }
+
+  .slide-caption p{
+    font-size: 1rem;
+}
+  
+}
+
+
+/* Botón flotante de WhatsApp */
+/* Agrega esto en tu CSS global o header.css */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 2.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+.whatsapp-float:hover {
+  background-color: #20ba5a;
+  color: #fff;
+  text-decoration: none;
+}
+@media (max-width: 600px) {
+  .whatsapp-float {
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+    bottom: 15px;
+    right: 15px;
+  }
+}
