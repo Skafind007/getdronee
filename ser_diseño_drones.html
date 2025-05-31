@@ -3,12 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/icono.png" sizes="192x192">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
 	<link rel="stylesheet" href="css/hero_serv.css">
     <link rel="stylesheet" href="css/ser_diseño_drones.css">
     <title>Diseño de Drones y Mantenimeinto - Gadget Drone</title>
+    <meta name="description" content="Diseño y mantenimiento de drones a medida: soluciones innovadoras, ingeniería colombiana y soporte especializado para la industria.">
+    <meta name="keywords" content="diseño de drones, mantenimiento, ingeniería, innovación, soluciones personalizadas, Gadget Drone, Colombia">
+    <meta name="author" content="Gadget Drone">
+
+    <meta property="og:title" content="Diseño de drones y mantenimiento | Gadget Drone">
+    <meta property="og:description" content="Diseño y mantenimiento de drones a medida: soluciones innovadoras, ingeniería colombiana y soporte especializado para la industria.">
+    <meta property="og:type" content="website">
 </head>
 <body>
     <header>
@@ -18,8 +26,20 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="#">Equipos</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li class="dropdown">
+                <a href="equipos.html" >Equipos ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="matrice300.html">Matrice 300 RTK</a></li>
+                    <li><a href="elios2.html">Elios 2</a></li>
+                    <li><a href="yuneec.html">Yuneec Typhoon H</a></li>
+                    <li><a href="camarah20t.html">Cámara H20T</a></li>
+                    <li><a href="camaraSen.html">Cámara con sensor multiespectral</a></li>
+                    <li><a href="sensorGas.html">Sensor de gases</a></li>
+                    <li><a href="AntenaGns.html">Antena GNSS de posicionamiento</a></li>
+                    <li><a href="MedidorEsp.html">Medidor de espesor de drones</a></li>
+                </ul>
+            </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle active" >Servicios ▼</a>
                     <ul class="dropdown-menu">
@@ -36,7 +56,7 @@
             <li><a href="contactanos.html">Contacto</a></li>
         </ul>
         </nav>
-        <button class="btn-cotizacion">Obtén una cotización</button>
+        <button class="btn-cotizacion" onclick="window.location.href='formulario.html'">Obtén una cotización</button>
         <button class="menu-toggle" aria-label="Abrir menú">
             <i class="fas fa-bars"></i>
         </button>

@@ -603,3 +603,49 @@ html, body {
   }
 }
 
+.brochure-section {
+  width: 100%;
+  background: #f5f5f5;
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.brochure-section h1{
+  padding-bottom: 1rem;
+  font-size: 2.5rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.brochure-section h3{
+  font-family: 'Arial', sans-serif;
+  font-size: 1.2rem;
+}
+.brochure-actions {
+  display: flex;
+  gap: 18px;
+  margin-top: 18px;
+  justify-content: center;
+}
+
+.brochure-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 2px solid #c79415;
+  color: #c79415;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1.7rem;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+.brochure-icon:hover {
+  background: #c79415;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(199,148,21,0.18);
+}
