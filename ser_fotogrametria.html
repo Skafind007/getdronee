@@ -3,11 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/icono.png" sizes="192x192">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/hero_serv.css">
     <link rel="stylesheet" href="css/ser_fotogrametria.css">
     <title>Fotogrametria - Gadget Drone</title>
+    <meta name="description" content="Servicios de fotogrametría, topografía y levantamientos 2D/3D con drones. Datos precisos para cartografía, minería, construcción y análisis territorial.">
+    <meta name="keywords" content="fotogrametría, drones, topografía, cartografía, levantamientos, minería, construcción, nube de puntos, ortofoto, Gadget Drone, Colombia">
+    <meta name="author" content="Gadget Drone">
+
+    
+    <meta property="og:title" content="Fotogrametría | Gadget Drone">
+    <meta property="og:description" content="Servicios de fotogrametría, topografía y levantamientos 2D/3D con drones. Datos precisos para cartografía, minería, construcción y análisis territorial.">
+    
+    <meta property="og:type" content="website">
 </head>
 <body>
     <header>
@@ -17,25 +28,37 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="#">Equipos</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li class="dropdown">
+                <a href="equipos.html" >Equipos ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="matrice300.html">Matrice 300 RTK</a></li>
+                    <li><a href="elios2.html">Elios 2</a></li>
+                    <li><a href="yuneec.html">Yuneec Typhoon H</a></li>
+                    <li><a href="camarah20t.html">Cámara H20T</a></li>
+                    <li><a href="camaraSen.html">Cámara con sensor multiespectral</a></li>
+                    <li><a href="sensorGas.html">Sensor de gases</a></li>
+                    <li><a href="AntenaGns.html">Antena GNSS de posicionamiento</a></li>
+                    <li><a href="MedidorEsp.html">Medidor de espesor de drones</a></li>
+                </ul>
+            </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle active" >Servicios ▼</a>
                     <ul class="dropdown-menu">
-                        <li><a href="ser_inspecciones.html" class="active">Inspecciones</a></li>
-                        <li><a href="ser_fotogrametria.html">Fotogrametría</a></li>
-                        <li><a href="#">Apoyo, búsqueda y rescate, seguridad y vigilancia</a></li>
-                        <li><a href="#">Inspección y fumigación agrónomica</a></li>
-                        <li><a href="#">Capacitación</a></li>
-                        <li><a href="#">Consultoría y asesoría aeronáutica</a></li>
-                        <li><a href="#">Suministros, aeronáutico e industrial</a></li>
-                        <li><a href="#">Diseño de drones y mantenimiento</a></li>
+                        <li><a href="ser_inspecciones.html" >Inspecciones</a></li>
+                        <li><a href="ser_fotogrametria.html" class="active">Fotogrametría</a></li>
+                        <li><a href="ser_apoyo_busqueda.html">Apoyo, búsqueda y rescate, seguridad y vigilancia</a></li>
+                        <li><a href="ser_fumigacion.html">Inspección y fumigación agrónomica</a></li>
+                        <li><a href="ser_capacitacion.html">Capacitación</a></li>
+                        <li><a href="ser_consultoria.html">Consultoría y asesoría aeronáutica</a></li>
+                        <li><a href="ser_suministros.html">Suministros, aeronáutico e industrial</a></li>
+                        <li><a href="ser_diseño_drones.html">Diseño de drones y mantenimiento</a></li>
                 </ul>
             </li>
             <li><a href="contactanos.html">Contacto</a></li>
         </ul>
         </nav>
-        <button class="btn-cotizacion">Obtén una cotización</button>
+        <button class="btn-cotizacion" onclick="window.location.href='formulario.html'">Obtén una cotización</button>
         <button class="menu-toggle" aria-label="Abrir menú">
             <i class="fas fa-bars"></i>
         </button>
