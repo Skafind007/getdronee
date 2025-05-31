@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+:root{
+    --fondo_index: #ffffff;
+    --color_texto_index: #ffff;
+    --color_texto_slider: #ffffff;
+    --hover_texto: #c79415;
+    --hover_claro: #f0c14b;
+    --header-text-color: #fff;
+    --color_texto: #333;
+    --fondo_oscuro: #000000;
+    --fuente_principal: 'Montserrat', sans-serif;
+  }
+/* Reset */
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+  body {
+    font-family: var(--fuente_principal);
+    background: var(--fondo_index);
+    color:var(--color_texto);
+    width: 100%;
+  }
+body {
+    display:grid;
+    place-content:center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background: url(../img/fondo_brochure.jpeg) no-repeat center center/cover;
+}
+
+body::before{
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5); /* Ajusta opacidad según necesites */
+    z-index: 0;
+}
+
+
+main {
+    margin-top: 90px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+section{
+    padding: 0 ;
+}
+
+.flipbook-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    transition: justify-content 0.3s;
+    justify-content: center;
+    padding-left: 0;
+}
+
+.flipbook-container.centered {
+    justify-content: center !important;
+}
+
+
+#flipbook {
+    width: 98vw;
+    max-width: 1600px;   /* Antes 1000px */
+    height: 80vw;
+    max-height: 1100px;  /* Antes 700px */
+    margin: auto;
+    
+}
+
+.page {
+    width: 49vw;
+    max-width: 800px;    /* Antes 500px */
+    height: 80vw;
+    max-height: 1100px;  /* Antes 700px */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+
+.page img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+
+.zoom-controls {
+    position: fixed;
+    bottom: 30px;
+    z-index: 100;
+    display: flex;
+    gap: 10px;
+    margin: auto;
+}
+.zoom-controls button {
+    font-size: 2rem;
+    background: #fff;
+    border: 2px solid #c79415;
+    color: #c79415;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    transition: background 0.2s, color 0.2s;
+    
+}
+.zoom-controls button:hover {
+    background: #c79415;
+    color: #fff;
+}
+
+.back-arrow {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    z-index: 200;
+    font-size: 2rem;
+    background: #fff;
+    border: 2px solid #c79415;
+    color: #c79415;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color 0.2s;
+}
+.back-arrow:hover {
+    background: #c79415;
+    color: #fff;
+}
+
+@media (max-width: 1600px) {
+.zoom-controls {
+    right: 30px;
+}
+}
+
+@media (max-width: 900px) {
+    #flipbook {
+        width: 98vw;
+        height: 90vw;
+        max-width: 98vw;
+        max-height: 900px;
+    }
+    .page {
+        width: 49vw;
+        height: 90vw;
+        max-width: 49vw;
+        max-height: 900px;
+    }
+}
+@media (max-width: 700px) {
+    #flipbook {
+        width: 98vw;
+        height: 140vw;
+        max-width: 98vw;
+        max-height: 1000px;
+    }
+    .page {
+        width: 98vw;
+        height: 140vw;
+        max-width: 98vw;
+        max-height: 1000px;
+    }
+}
+@media (max-width: 500px) {
+    .flipbook-container {
+        width: 100vw;
+        height: 100vh;
+        padding-left: 0;
+    }
+    #flipbook {
+        width: 100vw;
+        height: 230vw;
+        max-width: 100vw;
+        max-height: none;
+    }
+    .page {
+        width: 100vw;
+        height: 230vw;
+        max-width: 100vw;
+        max-height: none;
+    }
+    body{
+        height: 100%;
+    }
+
+    .zoom-controls {
+        margin: auto;
+        bottom: 40px;   /* <-- Cambia aquí el valor para subir los botones */
+        display: flex;  /* Mejor usa flex para centrar horizontalmente */
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto;
+    }
+}
