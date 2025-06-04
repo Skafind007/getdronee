@@ -237,25 +237,23 @@
 
 }
 /*SERVICIOS*/
+/* Servicios - Fondo y estilos generales */
 .services-section {
   position: relative;
-  background: url('../img/fuego.jpg');
-  background-size: cover;
+  background: url('../img/servicios.jpeg') no-repeat center center/cover;
   color: var(--color_texto_index);
   text-align: center;
-
   font-family: 'Arial', sans-serif;
   overflow: hidden;
-  min-height: 10rem; 
-  max-height:auto ;
+  min-height: 10rem;
+  color: #fff;
 }
 
-/* Overlay oscuro para mejorar contraste */
 .services-section::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.632); /* Ajusta opacidad según necesites */
+  background: rgba(0, 0, 0, 0.45);
   z-index: 0;
 }
 
@@ -265,55 +263,54 @@
   font-weight: 900;
   margin-bottom: 4rem;
   z-index: 1;
-  text-shadow: 0 0 8px rgba(0,0,0,0.7);
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.35);
 }
 
 .services-container {
   position: relative;
   z-index: 1;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Máximo 3 columnas */
-  gap: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
   width: 100%;
-  padding-bottom: 10rem;
-  justify-items: center;      /* Centra el contenido de cada celda */
-  justify-content: center;    /* Centra el grid completo */
+  padding-bottom: 6rem;
 }
 
 .service-card {
-  max-width: 400px;
-  width: 100%;
-  padding: 2.5rem;
-  opacity: 0;
-  transform: translateY(60px);
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.045);
+  flex: 1 1 33%;
+  max-width: 390px;
+  min-width: 260px;
+  box-sizing: border-box;
+  text-align: center;
+  border: solid 0.2rem rgba(255, 255, 255, 0.089);
+  padding: 2rem;
+  opacity: 1;
+  transform: none;
+  box-shadow: 0 8px 32px 0 rgba(242, 242, 242, 0.18);
   border-radius: 1.2rem;
   transition: transform 0.25s, box-shadow 0.25s;
-  background: rgba(139, 138, 138, 0.115);
-  backdrop-filter: blur(2px);
-}
-
-.service-card {
-  background: rgba(95, 94, 94, 0.15);
-  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18);
+  background: rgba(255, 255, 255, 0.062);
   backdrop-filter: blur(6px);
-  border-radius: 1.2rem;
   border: 1px solid rgba(255,255,255,0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .service-card:hover {
   transform: translateY(10px) scale(1.03);
-  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.2);
 }
-
 
 .service-card-img-container {
   width: 100%;
-  height: 260px; /* Antes 180px */
+  aspect-ratio: 1/1;
+  max-width: 180px;
+  margin: 0 auto 1rem auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.5rem;
   background: transparent;
   overflow: hidden;
 }
@@ -326,7 +323,6 @@
   display: block;
 }
 
-
 .service-card h3 {
   font-size: 1.2rem;
   margin-bottom: 0.7rem;
@@ -334,39 +330,49 @@
 
 .service-card p {
   font-weight: 400;
+  text-align: justify;
   font-size: 1rem;
   line-height: 1.4;
   max-width: 280px;
   margin: 0 auto;
 }
 
-/* Ajustes responsivos para la sección de servicios */
+/* Responsive */
 @media (max-width: 900px) {
   .services-container {
-    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     padding-bottom: 4rem;
   }
   .service-card {
-    max-width: 100%;
-    width: 100%;
+    max-width: 95vw;
+    min-width: 200px;
+    flex: 1 1 45%;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
+  .services-section {
+    padding: 3rem 0.5rem;
+    min-height: 0;
+  }
+  .services-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+  }
   .services-container {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.2rem;
+    padding-bottom: 2rem;
   }
   .service-card {
     max-width: 100%;
-    padding: 1rem 0.5rem;
+    min-width: 160px;
+    flex: 1 1 100%;
+    padding: 1.2rem 0.5rem;
+  }
+  .service-card-img-container {
+    max-width: 120px;
   }
 }
-
-
-
-
 /* Preguntas Frecuentes */
 .preguntas-frecuentes {
     margin-top: 0rem;
