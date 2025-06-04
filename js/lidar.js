@@ -31,10 +31,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Galería con animación fade-slide personalizada y más lenta
     const images = [
-        "img/.jpeg",
-        "img/.jpeg",
-        "img/s.jpeg",
-        "img/.jpg",
+        "img/LIDIAR.jpeg",
+        "img/LIDIAR1.jpeg",
+        "img/LIDIAR3.jpeg",
+    
  
     ];
     let current = 0;

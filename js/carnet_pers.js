@@ -34,6 +34,9 @@ document.addEventListener('DOMContentLoaded', function() {
         "img/gal3_carnet1.jpg",
         "img/gal4_carnet1.jpg",
         "img/Gal2_carnet1.jpg",
+    
+        "img/monica4.jpg",
+
  
     ];
     let current = 0;
