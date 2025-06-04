@@ -1,0 +1,329 @@
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+:root{
+    --fondo_index: #ffffff;
+    --color_texto_index: #ffff;
+    --color_texto_slider: #ffffff;
+    --hover_texto: #c79415;
+    --hover_claro: #f0c14b;
+    --header-text-color: #fff;
+    --color_texto: #333;
+    --fondo_oscuro: #000000;
+    --fuente_principal: 'Montserrat', sans-serif;
+  }
+
+
+/* Reset */
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+  body {
+    font-family: var(--fuente_principal);
+    background: var(--fondo_index);
+    color:var(--color_texto);
+    width: 100%;
+  }
+body {
+    overflow-x: hidden;
+}
+  main {
+    margin-top: 90px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+section{
+    padding: 0 ;
+}
+
+#titulo_header{
+  max-width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+/*ANGULOS*/
+.angulos {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: var(--fondo_oscuro);
+  display: flex;
+  flex-direction: row;
+}
+
+.angulo_frase {
+  position: relative;
+  height: auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color_texto_index);
+  font-size: 1.5rem;
+  max-width: 50%;
+  text-align: center;
+}
+
+.angulo_frase h2::after{
+  content: "";
+  display: block;
+  width: 80%;
+  height: 4px;
+  background-color: var(--hover_texto);
+  margin: 1rem auto;
+}
+.contenido_contenedor-slider {
+    flex: 1 1 350px;
+    min-width: 300px;
+    max-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+    margin: auto;
+}
+
+.slider-capacitacion {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 320px; /* <-- Asegura el alto */
+    margin: 0 auto;
+
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.slider-capacitacion {
+    min-height: 180px;
+    background: #222; /* Color de fondo por si la imagen no carga */
+}
+.slider-capacitacion .slide {
+    position: absolute;
+    width: 100%;
+    height: 320px;
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: 2;
+}
+.slider-capacitacion .slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+.slider-capacitacion img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 16px;
+    display: block;
+}
+.slider-dots {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    text-align: center;
+}
+.slider-dots .dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 4px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.2s, background 0.2s;
+}
+.slider-dots .dot.active {
+    opacity: 1;
+    background: #c79415; /* O el color que prefieras */
+}
+
+@media (max-width: 900px) {
+
+  .angulos{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .angulo_frase {
+    max-width: 95%;
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .angulos_frase h2{
+    font-size: 1.5rem;
+    text-align: center;
+    max-width: 100%;
+  }
+  .contenido_contenedor-informacion,
+  .contenido_contenedor-slider {
+    max-width: 95vw;
+    min-width: 0;
+    width: 100%;
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slider-capacitacion {
+    max-width: 100vw;
+    width: 100%;
+    height: 180px;
+    min-height: 120px;
+  }
+  .slider-capacitacion .slide,
+  .slider-capacitacion img {
+    height: 180px;
+    border-radius: 8px;
+  }
+}
+@media (max-width: 600px) {
+  .slider-capacitacion {
+    height: 10rem;
+    min-height: 80px;
+  }
+  .slider-capacitacion .slide,
+  .slider-capacitacion img {
+    height: 10rem;
+    border-radius: 6px;
+    object-fit: center;
+  object-position: center;
+  }
+
+    .contenido_contenedor-slider {
+    padding: 0;
+    max-height: 15rem;
+  }
+}
+
+/*SLIDER VIDEOS*/
+
+.slider_videos{
+  background-color: black;
+  padding-bottom: 2rem;
+}
+
+.slider_videos h2{
+  color: var(--color_texto_slider);
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: var(--fuente_principal);
+  padding-top: 2rem;
+}
+.slider_videos h2::after{
+  content: "";
+  display: block;
+  width: 50%;
+  height: 4px;
+  background-color: var(--hover_texto);
+  margin: 1rem auto;
+}
+.videos-slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
+}
+
+.videos-slider-track {
+  display: flex;
+  overflow: hidden;
+  width: 60%;
+
+}
+
+.video-slide {
+  min-width: 100%;
+  transition: opacity 0.5s;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-slide.active {
+  display: flex;
+}
+
+.video-slide video {
+  width: 100%;
+  max-width: 70vw;
+  height: 70vh;
+  max-height: 100vh;
+  border-radius: 12px;
+  background: #000;
+}
+
+.video-arrow {
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.video-slider-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.video-dot {
+  width: 12px;
+  height: 12px;
+  margin: 0 6px;
+  background: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.video-dot.active {
+  background: #333;
+}
+
+/* Botón flotante de WhatsApp */
+/* Agrega esto en tu CSS global o header.css */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 2.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+.whatsapp-float:hover {
+  background-color: #20ba5a;
+  color: #fff;
+  text-decoration: none;
+}
+@media (max-width: 600px) {
+  .whatsapp-float {
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+    bottom: 15px;
+    right: 15px;
+  }
+}

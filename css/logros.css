@@ -1,0 +1,74 @@
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+:root{
+    --fondo_index: #ffffff;
+    --color_texto_index: #ffff;
+    --color_texto_slider: #ffffff;
+    --hover_texto: #c79415;
+    --hover_claro: #f0c14b;
+    --header-text-color: #fff;
+    --color_texto: #333;
+    --fondo_oscuro: #000000;
+    --fuente_principal: 'Montserrat', sans-serif;
+  }
+
+
+/* Reset */
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+  body {
+    font-family: var(--fuente_principal);
+    background: var(--fondo_index);
+    color:var(--color_texto);
+    width: 100%;
+  }
+body {
+    overflow-x: hidden;
+}
+  main {
+    margin-top: 90px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+section{
+    padding: 0 ;
+}
+
+
+
+/* Botón flotante de WhatsApp */
+/* Agrega esto en tu CSS global o header.css */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 2.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+.whatsapp-float:hover {
+  background-color: #20ba5a;
+  color: #fff;
+  text-decoration: none;
+}
+@media (max-width: 600px) {
+  .whatsapp-float {
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+    bottom: 15px;
+    right: 15px;
+  }
+}
