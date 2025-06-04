@@ -217,6 +217,8 @@ section{
   font-family: var(--fuente_principal);
   padding-top: 2rem;
 }
+
+
 .slider_videos h2::after{
   content: "";
   display: block;
@@ -293,7 +295,7 @@ section{
 }
 
 /* Botón flotante de WhatsApp */
-/* Agrega esto en tu CSS global o header.css */
+
 .whatsapp-float {
   position: fixed;
   width: 60px;
