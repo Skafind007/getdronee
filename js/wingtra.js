@@ -31,10 +31,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Galería con animación fade-slide personalizada y más lenta
     const images = [
-       "img/trabajo_equipo.jpg",
-        "img/gal4_carnet1.jpg",
-       
-        "img/diseño2.png",
+       "img/WI4.jpEg",
+        "img/WI2.jpEg",
+             "img/WI1.jpEg",
+        "img/WI3.JPEg",
  
     ];
     let current = 0;

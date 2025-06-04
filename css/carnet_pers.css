@@ -98,7 +98,7 @@ body {
     .cv-title { font-size: 0.9em; }
     .gallery-img-slider {
         width: 95vw;
-        height: 120px;
+        height: 250px; /* Antes 120px */
         min-width: 0;
         min-height: 0;
     }
@@ -260,6 +260,7 @@ body {
             flex-direction: column;
             align-items: flex-start;
             animation: animate__fadeIn 1.2s;
+            
         }
         .contact-info li {
             color: #fff !important;
@@ -279,14 +280,17 @@ body {
         }
         .contact-info i {
             color: #ffffff;
+            text-align: justify;
         }
         /* Funciones */
         .section-content {
             color: #fff;
+            text-align: justify;
           
            
         }
         .section-content ul li {
+            text-align: justify;
             color: #fff;
             text-shadow: 0 1px 4px #000a;
         }
@@ -425,7 +429,7 @@ body {
             .main-columns { padding: 0 2vw 16px 2vw; }
             .gallery-img-slider {
                 width: 95vw;
-                height: 120px;
+                height: 180px; /* Antes 120px */
                 min-width: 0;
                 min-height: 0;
             }
