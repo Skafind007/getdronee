@@ -25,7 +25,7 @@
     </div>
     <nav>
         <ul>
-            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="index.html" class="active" >Home</a></li>
             <li><a href="nosotros.html">Nosotros</a></li>
             <li class="dropdown">
                 <a href="equipos.html"  >Equipos ▼</a>
@@ -48,12 +48,14 @@
                 <a href="#" class="dropdown-toggle" >Servicios ▼</a>
                 <ul class="dropdown-menu">
                     <li><a href="ser_inspecciones.html">Inspecciones</a></li>
-                    <li><a href="ser_fotogrametria.html">Capacitación</a></li>
+                    <li><a href="ser_capacitacion.html">Capacitación</a></li>
                     <li><a href="ser_consultoria.html">Consultoría y asesoría aeronáutica</a></li>
                     <li><a href="ser_suministros.html">Suministros, aeronáutico e industrial</a></li>
+                    <li><a href="ser_produccion_grabacion.html">Producción y grabación en paradas de plantas industriales</a></li>
                  
                 </ul>
             </li>
+            <li><a href="logros.html">logros</a></li>
             <li><a href="contactanos.html">Contacto</a></li>
         </ul>
     </nav>
@@ -64,8 +66,6 @@
 </header>
 
 <main>
-
-
 
   <!-- SLIDER PRINCIPAL -->
   <section class="slider">
@@ -170,12 +170,20 @@
           </div>
         </div>
       </div>
-      
-   
     </div>
-   
     <div class="arrow arrow-left">&#10094;</div>
     <div class="arrow arrow-right">&#10095;</div>
+  </section>
+
+  <!-- SECCION DE PRESENTACION -->
+  <section class="presentacion_section">
+    <div class="presentacion_container">
+      <h1 class="presentacion_titulo">Alta precisión y máxima eficiencia: así es como trabajamos en Gadget Drone.</h1>
+      <div class="presentacion_cont-video" style="position:relative;">
+        <video id="video1" class="presentacion_video" src="img/video_index.mp4" autoplay muted playsinline ></video>
+        <video id="video2" class="presentacion_video" src="img/video2_index.mp4" muted playsinline ></video>
+      </div>
+    </div>
   </section>
 
   <!-- SERVICIOS -->
@@ -187,7 +195,7 @@
       <h3>Inspecciones</h3>
      
       <div class="service-card-img-container">
-        <img class="service-card_img" src="img/termica.jpg" alt="">
+        <img class="service-card_img" src="img/inspeccion_index.jpeg" alt="">
       </div>
     </div>
     <div class="service-card service-card--hidden">
@@ -201,16 +209,23 @@
       <h3>Consultoria y asesoría aeronáutica</h3>
      
       <div class="service-card-img-container">
-        <img class="service-card_img" src="img/operaciones_aereas.jpg" alt="">
+        <img class="service-card_img" src="img/consultoria_index.jpeg" alt="">
       </div>
     </div>
-        <div class="service-card service-card--hidden">
+    <div class="service-card service-card--hidden">
       <h3>Suministros aeronáuticos e industrial</h3>
       <div class="service-card-img-container">
         <img class="service-card_img" src="img/dron_elios_3.jpeg" alt="">
       </div>
     </div>
-  </div>
+    <div class="service-card service-card--hidden">
+      <h3>Producción y grabación en parada de plantas industriales</h3>
+      <div class="service-card-img-container">
+        <img class="service-card_img" src="img/produccion_index.jpeg" alt="">
+      </div>
+    </div>
+
+  
 </section>
 
 <!-- PREGUNTAS FRECUENTES -->
@@ -280,6 +295,7 @@
 <script src="js/responsive_menu.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 <script src="js/animacion_index.js"></script>
+<script src="js/videos_index.js"></script>
 
 </body>
 </html>
