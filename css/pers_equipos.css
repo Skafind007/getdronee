@@ -1,7 +1,6 @@
 body {
     font-family: 'Montserrat', Arial, sans-serif;
-    background: linear-gradient(rgba(40,40,40,0.7), rgba(40,40,40,0.7)), 
-        url('../img/equpos_fondo.jpg');
+    
     background-size: cover;
     background-position: center 100%;
     background-repeat: no-repeat;
