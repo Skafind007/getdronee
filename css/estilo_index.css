@@ -166,9 +166,11 @@
 /*SERVICIOS*/
 .services-section {
   position: relative;
-  background: url('../img/servicios.jpeg') no-repeat center center/cover;
+  background: url('../img/fuego.jpg');
+  background-size: cover;
   color: var(--color_texto_index);
   text-align: center;
+
   font-family: 'Arial', sans-serif;
   overflow: hidden;
   min-height: 10rem; 
@@ -180,7 +182,7 @@
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.5); /* Ajusta opacidad según necesites */
+  background: rgba(0, 0, 0, 0.632); /* Ajusta opacidad según necesites */
   z-index: 0;
 }
 
@@ -196,30 +198,30 @@
 .services-container {
   position: relative;
   z-index: 1;
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Máximo 3 columnas */
+  gap: 4rem;
   width: 100%;
   padding-bottom: 10rem;
+  justify-items: center;      /* Centra el contenido de cada celda */
+  justify-content: center;    /* Centra el grid completo */
 }
 
 .service-card {
-  max-width: 300px;
-  text-align: center;
-  border: solid 0.2rem rgba(255, 255, 255, 0.8);
-  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+  padding: 2.5rem;
   opacity: 0;
   transform: translateY(60px);
-    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.045);
   border-radius: 1.2rem;
   transition: transform 0.25s, box-shadow 0.25s;
-  background: rgba(255,255,255,0.08);
+  background: rgba(139, 138, 138, 0.115);
   backdrop-filter: blur(2px);
 }
 
 .service-card {
-  background: rgba(255,255,255,0.15);
+  background: rgba(95, 94, 94, 0.15);
   box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18);
   backdrop-filter: blur(6px);
   border-radius: 1.2rem;
@@ -234,23 +236,21 @@
 
 .service-card-img-container {
   width: 100%;
-  height: 180px; /* Ajusta la altura según tu diseño */
+  height: 260px; /* Antes 180px */
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   background: transparent;
   overflow: hidden;
 }
 
-.service-card img {
+.service-card_img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
   display: block;
-  margin: 0;
-  padding: 0;
 }
 
 
@@ -269,35 +269,20 @@
 
 /* Ajustes responsivos para la sección de servicios */
 @media (max-width: 900px) {
-  .services-section {
-    padding: 8rem 1rem;
-    min-height: 0;
-  }
-  .services-section h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
   .services-container {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+    padding-bottom: 4rem;
   }
   .service-card {
-    max-width: 90%;
+    max-width: 100%;
     width: 100%;
   }
 }
 
 @media (max-width: 600px) {
-  .services-section {
-    padding: 3rem 0.5rem;
-    min-height: 0;
-  }
-  .services-section h2 {
-    font-size: 1.3rem;
-    margin-bottom: 1.2rem;
-  }
   .services-container {
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
   .service-card {
