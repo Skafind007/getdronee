@@ -2,7 +2,7 @@
     --fondo_index: #ffffff;
     --color_texto_index:#ffff;
     --color_texto_slider: #ffffff;
-    --hover_texto: #c79415;
+    --hover_texto: rgb(199, 148, 21);
     --hover_claro: #f0c14b;
     --header-text-color: #fff;
     --color_texto: #333;
@@ -163,6 +163,79 @@
   }
 }    
 
+/*PRESENTACION*/
+.presentacion_section{
+  background-color: black;
+}
+.presentacion_container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-bottom:2rem ;
+}
+.presentacion_titulo{
+  color: var(--color_texto_index);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  padding: 3rem;
+  text-align: center;
+}
+
+.presentacion_titulo::after{
+      content: "";
+    display: block;
+    margin: 0.5rem auto 0 auto;
+    height: 3px;
+    width: 90%;
+    background: linear-gradient(90deg, var(--hover_texto), var(--hover_claro));
+    border-radius: 4px;
+}
+.presentacion_cont-video{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-bottom: 1rem;
+}
+.presentacion_video{
+  width: 40%;
+  height: 40%;
+  transition: opacity 0.7s;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(199, 148, 21, 0.8);
+}
+
+#video2{
+  opacity:0.4;
+}
+
+@media (max-width: 600px) {
+  .presentacion_titulo {
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+  .presentacion_video {
+    width: 100%;
+    height: 20rem;
+    margin-bottom:1rem ;
+  }
+  .presentacion_cont-video {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .presentacion_titulo {
+    font-size: 1rem;
+    padding: 0.5rem;
+    text-align: center;
+  }
+
+}
 /*SERVICIOS*/
 .services-section {
   position: relative;
@@ -199,7 +272,7 @@
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Máximo 3 columnas */
+  grid-template-columns: repeat(3, 1fr); /* Máximo 3 columnas */
   gap: 4rem;
   width: 100%;
   padding-bottom: 10rem;
