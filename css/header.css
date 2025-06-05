@@ -23,7 +23,7 @@ header {
     padding: 1rem 2rem;
     /*box-shadow: 0 4px 12px rgba(228, 4, 4, 0.1);*/
     display: flex;
-    justify-content: space-between;
+  
     align-items: center;
     z-index: 1000;
 }
@@ -31,10 +31,19 @@ header .logo img {
     height: 50px;
     cursor: pointer;
 }
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
 nav ul {
     list-style: none;
     display: flex;
+    align-items: center;
     gap: 1.8rem;
+    
 }
 nav ul li a {
     font-weight: 600;
@@ -75,6 +84,24 @@ nav ul li a:hover::after {
 .btn-cotizacion:hover {
     transform: scale(1.05);
 }
+/*
+#especial{
+  margin-right: 10rem;
+}
+*/
+/*
+#li-cotizacion {
+  position: relative;
+  right: 10px;
+}*/
+
+/*
+#li-cotizacion {
+  position: absolute;
+  right: 10px;
+}
+*/
+
 
 /*RESPONSIVE*/
 
@@ -129,6 +156,18 @@ nav ul li a:hover::after {
   }
   header {
     padding: 1rem;
+  }
+
+    #li-cotizacion {
+    width: 100%;
+    padding: 1rem 0;
+  }
+  .btn-cotizacion {
+    width: 90%;
+    font-size: 1rem;
+    padding: 0.8rem 0;
+    margin: 0 auto;
+    display: block;
   }
 }
 
