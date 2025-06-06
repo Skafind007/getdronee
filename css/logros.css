@@ -37,6 +37,231 @@ section{
 
 
 
+/*INFORMACION*/
+.contenido {
+  background: url('../img/plantas_industriales.jpeg') no-repeat center center/cover;
+  color: var(--color_texto_index);
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  padding: 10rem 0;
+
+}
+
+.contenido::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.7); /* Ajusta opacidad según necesites */
+  z-index: 0;
+}
+
+.contenido_contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Permite que los hijos bajen si no hay espacio */
+    gap: 2rem;       /* Espacio entre los bloques */
+}
+
+.contenido_contenedor-informacion {
+    flex: 1 1 350px; /* Crece, encoge, ancho mínimo */
+    min-width: 300px;
+    max-width: 50%;
+    padding: 2rem;
+}
+
+.cont_info{
+    margin:2rem
+}
+
+.informacion{
+    max-width: 70%;
+  text-align: center;
+  border: solid 0.2rem rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  transform: translateX(-60px);
+
+  border-radius: 1.2rem;
+  transition: transform 0.25s, box-shadow 0.25s;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(2px);
+  margin: auto;
+}
+
+.informacion {
+  background: rgba(255,255,255,0.15);
+  box-shadow: 0 8px 32px 0 rgba(199, 148, 21, 0.2);
+  backdrop-filter: blur(6px);
+  border-radius: 1.2rem;
+  border: 1px solid rgba(255,255,255,0.18);
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+.informacion h2{
+  text-align: center;
+}
+
+.informacion:hover {
+  transform: translateX(10px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(199, 148, 21, 0.6);
+}
+
+/*SLIDER*/
+.contenido_contenedor-slider {
+    flex: 1 1 350px;
+    min-width: 300px;
+    max-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+    margin: auto;
+}
+
+.slider-capacitacion {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 320px; /* <-- Asegura el alto */
+    margin: 0 auto;
+
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.slider-capacitacion {
+    min-height: 180px;
+    background: #222; /* Color de fondo por si la imagen no carga */
+}
+.slider-capacitacion .slide {
+    position: absolute;
+    width: 100%;
+    height: 320px;
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: 2;
+}
+.slider-capacitacion .slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+.slider-capacitacion img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 16px;
+    display: block;
+}
+.slider-dots {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    text-align: center;
+}
+.slider-dots .dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 4px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.2s, background 0.2s;
+}
+.slider-dots .dot.active {
+    opacity: 1;
+    background: #c79415; /* O el color que prefieras */
+}
+@media (max-width: 900px) {
+  .contenido {
+    max-height: none;
+    height: auto;
+    padding: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contenido_contenedor {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    width: 100%;
+  }
+  .contenido_contenedor-informacion,
+  .contenido_contenedor-slider {
+    max-width: 95vw;
+    min-width: 0;
+    width: 100%;
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .informacion {
+    max-width: 100%;
+    font-size: 1rem;
+    padding: 1rem 0.5rem;
+    margin: 0.5rem 0;
+    transform: none;
+  }
+  .slider-capacitacion {
+    max-width: 100vw;
+    width: 100%;
+    height: 180px;
+    min-height: 120px;
+  }
+  .slider-capacitacion .slide,
+  .slider-capacitacion img {
+    height: 180px;
+    border-radius: 8px;
+  }
+}
+@media (max-width: 600px) {
+  .slider-capacitacion {
+    height: 10rem;
+    min-height: 80px;
+  }
+  .slider-capacitacion .slide,
+  .slider-capacitacion img {
+    height: 10rem;
+    border-radius: 6px;
+    object-fit: center;
+  object-position: center;
+  }
+
+    .contenido_contenedor-slider {
+    padding: 0;
+    max-height: 15rem;
+  }
+}
+
+.btn-articulo {
+  position: relative;
+  display: inline-block;
+  background-color: #c79415;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  z-index: 1000;
+}
+.btn-articulo:hover, .btn-articulo:focus {
+  background-color: #a87a0c;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
 /* Botón flotante de WhatsApp */
 /* Agrega esto en tu CSS global o header.css */
 .whatsapp-float {

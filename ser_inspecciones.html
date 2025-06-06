@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="css/hero_serv.css">
 </head>
 <body>
- <header>
+<header>
     <div class="logo">
         <img src="img/logo.jpg" alt="Gadget Drone Logo" />
     </div>
@@ -38,21 +38,21 @@
                     <li><a href="matrice300.html">Matrice 300 RTK</a></li>
                     <li><a href="elios2.html">Elios 2</a></li>  
                     <li><a href="wintra.html">Wingtra</a></li>  
-                    <li><a href="autel.html"> Drone v200 chc con sensor Lidar</a></li>   
+                    <li><a href="autel.html">Drone v200 CHC con sensor Lidar</a></li>   
                     <li><a href="mavic2.html">Mavic Air 2 S</a></li>   
                     <li><a href="avata2.html">Avata 2</a></li>                
                     <li><a href="camaraSen.html">Cámara con sensor multiespectral</a></li>
                     <li><a href="camarah20t.html">Cámara H20 T</a></li>
-                    <li><a href="sensorGas.html">Sensor de gases</a></li>
+                    <!--<li><a href="sensorGas.html">Sensor de gases</a></li>--> 
                     <li><a href="AntenaGns.html">Antena GNSS de posicionamiento</a></li>
                     <li><a href="MedidorEsp.html">Medidor de espesor de drones</a></li>
           
                 </ul>
             </li>
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle active" >Servicios ▼</a>
+                <a href="#" class="dropdown-toggle active"  >Servicios ▼</a>
                 <ul class="dropdown-menu">
-                    <li><a href="ser_inspecciones.html" class="active">Inspecciones</a></li>
+                    <li><a href="ser_inspecciones.html"  class="active">Inspecciones</a></li>
                     <li><a href="ser_capacitacion.html">Capacitación</a></li>
                     <li><a href="ser_consultoria.html">Consultoría y asesoría aeronáutica</a></li>
                     <li><a href="ser_suministros.html">Suministros, aeronáutico e industrial</a></li>
@@ -60,11 +60,13 @@
                  
                 </ul>
             </li>
-            <li><a href="logros.html">logros</a></li>
-            <li><a href="contactanos.html">Contacto</a></li>
+            <li><a href="logros.html">Logros</a></li>
+            <li id="especial"><a href="contactanos.html">Contacto</a></li>
+            <li id="li-cotizacion">
+              <button class="btn-cotizacion" onclick="window.location.href='formulario.html'">Obtén una cotización</button>
+            </li>
         </ul>
     </nav>
-    <button class="btn-cotizacion" onclick="window.location.href='formulario.html'">Obtén una cotización</button>
     <button class="menu-toggle" aria-label="Abrir menú">
         <i class="fas fa-bars"></i>
     </button>
@@ -105,10 +107,14 @@
 					        <img src="img/plantas_industriales.jpeg" />
 					        <span class="text">Plantas Industriales</span>
 				        </div>
-                        <div class="item-wrap">
-					        <img src="img/tuberias.jpeg" />
-					        <span class="text">Lineas de Tuberia</span>
-				        </div>
+                <div class="item-wrap">
+                  <img src="img/tuberias.jpeg" />
+                  <span class="text">Lineas de Tuberia</span>
+                </div>
+                <div class="item-wrap">
+                  <img src="img/fondo preguntas.jpeg" />
+                  <span class="text">Medidas de Espesos</span>
+                </div>
 			        </div>
 		        </div>
 	        </div>
@@ -126,7 +132,7 @@
 					        <span class="text">Dron Elios 3</span>
 				        </div>
 				        <div class="item-wrap">
-					        <img src="img/tanques.jpg"/>
+					        <img src="img/insp_tanque.jpeg"/>
 					        <span class="text">Tanques</span>
 				        </div>
 				        <div class="item-wrap">
@@ -134,21 +140,25 @@
 					        <span class="text">Lugar Dificil de Acceso</span>
 				        </div>
 				        <div class="item-wrap">
-					        <img src="img/tuberia_confinado.jpeg" />
+					        <img src="img/inspe_tuberia.jpeg" />
 					        <span class="text">Tuberias</span>
 				        </div>
-                        <div class="item-wrap">
-					        <img src="img/minas.png" />
-					        <span class="text">Minas</span>
+                <div class="item-wrap">
+					        <img src="img/lugar_sin_luz.jpeg" />
+					        <span class="text">Lugares sin iluminación</span>
+				        </div>
+                <div class="item-wrap">
+					        <img src="img/dron_elios.jpeg" />
+					        <span class="text">Dron Elios</span>
 				        </div>
 
                         <!-- BUCLE-->
-                         <div class="item-wrap">
+                <div class="item-wrap">
 					        <img src="img/dron_elios_3.jpeg" />
 					        <span class="text">Dron Elios 3</span>
 				        </div>
 				        <div class="item-wrap">
-					        <img src="img/tanques.jpg"/>
+					        <img src="img/insp_tanque.jpeg"/>
 					        <span class="text">Tanques</span>
 				        </div>
 				        <div class="item-wrap">
@@ -156,12 +166,16 @@
 					        <span class="text">Lugar Dificil de Acceso</span>
 				        </div>
 				        <div class="item-wrap">
-					        <img src="img/tuberia_confinado.jpeg" />
+					        <img src="img/inspe_tuberia.jpeg" />
 					        <span class="text">Tuberias</span>
 				        </div>
-                        <div class="item-wrap">
-					        <img src="img/minas.png" />
-					        <span class="text">Minas</span>
+                <div class="item-wrap">
+					        <img src="img/lugar_sin_luz.jpeg" />
+					        <span class="text">Lugares sin iluminación</span>
+				        </div>
+                <div class="item-wrap">
+					        <img src="img/dron_elios.jpeg" />
+					        <span class="text">Dron Elios</span>
 				        </div>
                         <!-- FIN BUCLE-->
 			        </div>

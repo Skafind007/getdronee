@@ -7,17 +7,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/ser_produccion-grabacion.css">
+    <link rel="stylesheet" href="css/hero_serv.css">
+    <link rel="stylesheet" href="css/logros.css">
     <title>Logros - Gadget Drone</title>
 </head>
 <body>
-     <header>
+<header>
     <div class="logo">
         <img src="img/logo.jpg" alt="Gadget Drone Logo" />
     </div>
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html" >Home</a></li>
             <li><a href="nosotros.html">Nosotros</a></li>
             <li class="dropdown">
                 <a href="equipos.html"  >Equipos ▼</a>
@@ -25,12 +26,12 @@
                     <li><a href="matrice300.html">Matrice 300 RTK</a></li>
                     <li><a href="elios2.html">Elios 2</a></li>  
                     <li><a href="wintra.html">Wingtra</a></li>  
-                    <li><a href="autel.html"> Drone v200 chc con sensor Lidar</a></li>   
+                    <li><a href="autel.html">Drone v200 CHC con sensor Lidar</a></li>   
                     <li><a href="mavic2.html">Mavic Air 2 S</a></li>   
                     <li><a href="avata2.html">Avata 2</a></li>                
                     <li><a href="camaraSen.html">Cámara con sensor multiespectral</a></li>
                     <li><a href="camarah20t.html">Cámara H20 T</a></li>
-                    <li><a href="sensorGas.html">Sensor de gases</a></li>
+                    <!--<li><a href="sensorGas.html">Sensor de gases</a></li>--> 
                     <li><a href="AntenaGns.html">Antena GNSS de posicionamiento</a></li>
                     <li><a href="MedidorEsp.html">Medidor de espesor de drones</a></li>
           
@@ -40,26 +41,101 @@
                 <a href="#" class="dropdown-toggle" >Servicios ▼</a>
                 <ul class="dropdown-menu">
                     <li><a href="ser_inspecciones.html">Inspecciones</a></li>
-                    <li><a href="ser_fotogrametria.html">Capacitación</a></li>
+                    <li><a href="ser_capacitacion.html">Capacitación</a></li>
                     <li><a href="ser_consultoria.html">Consultoría y asesoría aeronáutica</a></li>
                     <li><a href="ser_suministros.html">Suministros, aeronáutico e industrial</a></li>
                     <li><a href="ser_produccion_grabacion.html">Producción y grabación en paradas de plantas industriales</a></li>
                  
                 </ul>
             </li>
-            <li><a href="logros.html" class="active">logros</a></li>
-            <li><a href="contactanos.html">Contacto</a></li>
+            <li><a href="logros.html" class="active">Logros</a></li>
+            <li id="especial"><a href="contactanos.html">Contacto</a></li>
+            <li id="li-cotizacion">
+              <button class="btn-cotizacion" onclick="window.location.href='formulario.html'">Obtén una cotización</button>
+            </li>
         </ul>
     </nav>
-    <button class="btn-cotizacion" onclick="window.location.href='formulario.html'">Obtén una cotización</button>
     <button class="menu-toggle" aria-label="Abrir menú">
         <i class="fas fa-bars"></i>
     </button>
 </header>
 
 <main>
+  <section class="hero">
+    <div class="hero-image-bg">
+        <img src="img/fondo_mision.jpg" alt="Logros">
+    </div>
+    <div class="hero-content">
+        <h1 id = "titulo_header">¡Logros!</h1>
+        <div class="hero-content_texto">
+            <p>
+                En Gadget Drone, nos enorgullece compartir nuestros logros y el impacto positivo que hemos tenido en la industria con nuestra tecnologia. 
+            </p>
+        </div>
+    </section>
 
 
+  <section class="contenido">
+          <div class="contenido_contenedor">
+            <div class="contenido_contenedor-informacion">
+              <div class="cont_info">
+                  <div class="informacion">
+                    <h2>¡Salvamos una refinería de petróleo! </h2>
+                    <br>
+                    <p>Cubrimos una emergencia nacional en Barrancabermeja Santander.</p>
+                    <br>
+                    <p>Mientras se inspeccionaba una Tea de Balance de 95 metros de alto utilizada para aliviar el gas resultante de los 
+                      procesos de refinería, se detecto un agujero de 6 cm de diametro el cual amenazaba toda la estructura y la refineria.
+                    </p>
+                  </div>
+              </div>
+              
+              <div class="cont_info">
+                <div class="informacion">
+                  <p>
+                    Debido a la situación se tuvo que controlar dos drones, uno para monitorear la situacion y otro don modificado para instalar el parche magnetico.
+                    Gracias a nuestros pilotos expertos, en pocas horas y despues de varios intentos fue instalado el parche magnetico, con exito y se evito el desastre.
+                  </p>
+                </div>
+              </div>
+            </div>
+              
+              <div class="contenido_contenedor-slider">
+              <div class="slider-capacitacion">
+  <div class="slide active">
+      <img src="img/logro1.jpg" alt="Capacitación 1">
+  </div>
+  <div class="slide">
+      <img src="img/slider1.jpeg" alt="Capacitación 2">
+  </div>
+  <div class="slide">
+      <img src="img/servicios.jpeg" alt="Capacitación 3">
+  </div>
+  <div class="slide">
+      <img src="img/fondo_noso.jpg" alt="Capacitación 3">
+  </div>
+  <div class="slide">
+      <img src="img/tuberias.jpeg" alt="Capacitación 3">
+  </div>
+  <div class="slider-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+  </div>
+  </div>
+              </div>
+    </div>
+    <div style="text-align:center; margin: 2rem 0;">
+  <a href="https://www.commercialuavnews.com/energy/usando-drones-para-realizar-ensayos-no-destructivos-en-el-sector-petrolero-y-de-gas-y-salvando-una-refiner-a-de-petr-leo-mientras-lo-haces" 
+     class="btn-articulo" 
+     target="_blank" 
+     rel="noopener noreferrer">
+    Leer artículo relacionado
+  </a>
+</div>
+  </section>
 </main>
 
 <footer>
@@ -99,5 +175,6 @@
   <i class="fab fa-whatsapp"></i>
 </a>
 <script src="js/responsive_menu.js"></script>
+<script src="js/animacion_capacitacion.js"></script>
 </body>
 </html>
