@@ -23,8 +23,8 @@ body {
     margin-right: auto;
 }
 .carnet {
-    width: 280px;
-    height: 480px;
+    width: 380px;      /* Antes: 280px */
+    height: 620px;     /* Antes: 480px */
     background: linear-gradient(160deg, #23272b 0%, #181a1b 100%);
     border-radius: 28px;
     box-shadow: 0 8px 32px rgba(30,30,30,0.18), 0 2px 16px rgba(0,0,0,0.25);
@@ -56,8 +56,8 @@ body {
     background: #23272b;
     border-radius: 50%;
     margin: 32px auto 18px auto;
-    width: 120px;           /* Aumenta el tamaño */
-    height: 120px;
+    width: 160px;      /* Antes: 120px */
+    height: 160px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,16 +68,16 @@ body {
     padding: 0;
 }
 .logo_carnet img {
-    width: 100px;           /* Más grande */
-    height: 100px;
+    width: 140px;      /* Antes: 100px */
+    height: 140px;
     object-fit: cover;      /* Recorta la imagen para que llene el círculo */
     background: transparent;
     border-radius: 50%;
     display: block;
 }
 .profile-pic-bg {
-    width: 120px;
-    height: 10rem;
+    width: 160px;      /* Antes: 120px */
+    height: 13rem;     /* Antes: 10rem */
     background: #111;
     border-radius: 10px;
     display: flex;
@@ -199,6 +199,23 @@ body {
     width: 84px;
     height: 84px;
 }
+.botones-qr {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 18px;
+    margin-bottom: 10px;
+}
+.qr-mini img {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    background: #fff;
+    padding: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
 /* Responsive */
 @media (max-width: 900px) {
     .carnet-container {
@@ -225,6 +242,14 @@ body {
     .logo img {
         width: 80vw;
         max-width: 160px;
+    }
+    .botones-qr {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .qr-mini img {
+        width: 48px;
+        height: 48px;
     }
 }
 @media (max-width: 400px) {
