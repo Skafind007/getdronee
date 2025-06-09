@@ -35,5 +35,19 @@ function getFlipbookHeight() {
         }
     });
 
+    // ...existing code...
+
+$(document).ready(function () {
+    // ...existing code...
+
+    // Flechas de navegación solo para escritorio
+    $('.arrow-left').on('click', function () {
+        $("#flipbook").turn("previous");
+    });
+    $('.arrow-right').on('click', function () {
+        $("#flipbook").turn("next");
+    });
+});
+
 });
 
