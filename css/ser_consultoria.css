@@ -35,7 +35,7 @@ section{
 }
 
 
-/*SLIDER FUMIGACION*/
+/*SLIDER CONSULTORIA*/
 .slider_consultoria{
 	background-color: #000;
 }
@@ -86,12 +86,16 @@ section{
   z-index: 2;
   pointer-events: auto;
 }
-.slider-simple img {
+.slider_img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center; /* Centra la imagen en todos los tamaños */
   border-radius: 16px;
+}
+
+.img_aux{
+  object-fit: fill !important;
 }
 
 .slide-caption p{
