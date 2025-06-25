@@ -378,6 +378,7 @@
     max-width: 120px;
   }
 }
+
 /* Preguntas Frecuentes */
 .preguntas-frecuentes {
     margin-top: 0rem;
@@ -393,7 +394,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 20rem;
+    padding: 4rem 2rem;
     position: relative;
     overflow: hidden;
 }
@@ -419,7 +420,8 @@
     position:relative;
     z-index: 2;
     color: var(--color_texto_index);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    text-align: justify;
     transform-origin: top;
     transform: scaleY(0);
     opacity: 0;
@@ -427,6 +429,7 @@
     max-height: none; /* quita max-height */
     overflow: visible;
     padding-bottom: 0.7rem;
+    padding: 1rem;
 }
 
 .contenedor:hover .texto-oculto {
@@ -451,8 +454,31 @@
     position:relative;
     z-index: 2;
     color: var(--color_texto_index);
-    max-width: 50%;
+    margin: auto;
     padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.disable{
+  display: none !important;
+}
+
+/* Estilos adicionales para las preguntas frecuentes */
+.texto-visible {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.texto-visible:hover {
+  color: var(--hover_claro);
+}
+
+.contenedor.activo {
+  background-color: rgba(199, 148, 21, 0.1);
+}
+
+.contenedor.activo .texto-visible {
+  color: var(--hover_claro);
 }
 
 /* Ajustes responsivos para preguntas frecuentes */
