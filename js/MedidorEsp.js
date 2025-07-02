@@ -31,9 +31,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Galería con animación fade-slide personalizada y más lenta
     const images = [
-        "img/MED2.jpEg",
-        "img/MED3.png",
-        "img/ESP1.png",
+        "img/MED2.jpEg"
+      
  
     ];
     let current = 0;

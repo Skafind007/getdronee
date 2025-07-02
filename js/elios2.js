@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Galería con animación fade-slide personalizada y más lenta
     const images = [
        
-        "img/ELIOS2.JPEG",
+     
        
         "img/HELIOS4.jpg",
 
