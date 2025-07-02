@@ -34,9 +34,9 @@ document.addEventListener('DOMContentLoaded', function() {
        
         "img/ELIOS2.JPEG",
        
-        "img/HELIOS4.jpEg",
+        "img/HELIOS4.jpg",
 
-        "img/ELIOS3.JPEG",
+        "img/ELIOS3.png",
  
     ];
     let current = 0;

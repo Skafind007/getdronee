@@ -35,6 +35,13 @@ body {
 section{
     padding: 0 ;
 }
+
+@media (max-width: 600px) {
+  section {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
 .hero {
     position: relative;
     min-height: 100vh;
@@ -94,13 +101,13 @@ section{
         max-height: 100vh;
     }
     .hero-content {
-        padding: 2rem 1rem;
+        padding: 1rem 0.5rem;
     }
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
     }
     .hero-content p {
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin: 2rem 0;
     }
 }
