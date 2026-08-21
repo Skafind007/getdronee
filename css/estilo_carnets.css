@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+header{
+    font-family: Montserrat;
+}
+body {
+    background-image: 
+        linear-gradient(rgba(30,30,30,0.7), rgba(30,30,30,0.7)),
+        url("../img/fondo_carnets.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+}
+.carnet-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    justify-content: center;
+    margin-top: 10rem;
+    padding: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.carnet {
+    width: 380px;      /* Antes: 280px */
+    height: 620px;     /* Antes: 480px */
+    background: linear-gradient(160deg, #23272b 0%, #181a1b 100%);
+    border-radius: 28px;
+    box-shadow: 0 8px 32px rgba(30,30,30,0.18), 0 2px 16px rgba(0,0,0,0.25);
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2.5px solid #646464;
+}
+.carnet-frontal {
+    background: linear-gradient(180deg, rgba(35,39,43,0.98) 0 60%, rgba(24,26,27,0.92) 100%);
+    position: relative;
+    overflow: hidden;
+}
+.fondo-figura {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    height: 130px;
+    background: radial-gradient(ellipse 90% 60% at 50% 0%, #6c63ff 0%, #737a7b 80%, transparent 100%);
+    opacity: 0.18;
+    z-index: 1;
+    pointer-events: none;
+}
+.logo_carnet {
+    background: #23272b;
+    border-radius: 50%;
+    margin: 32px auto 18px auto;
+    width: 160px;      /* Antes: 120px */
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+
+    box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+    padding: 0;
+}
+.logo_carnet img {
+    width: 140px;      /* Antes: 100px */
+    height: 140px;
+    object-fit: cover;      /* Recorta la imagen para que llene el círculo */
+    background: transparent;
+    border-radius: 50%;
+    display: block;
+}
+.profile-pic-bg {
+    width: 160px;      /* Antes: 120px */
+    height: 13rem;     /* Antes: 10rem */
+    background: #111;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    animation: pic-pop 1.2s 0.2s cubic-bezier(.25,1.5,.5,1) backwards;
+}
+@keyframes pic-pop {
+    0% { transform: scale(0.7) rotate(8deg); opacity: 0; }
+    60% { transform: scale(1.08) rotate(-2deg); opacity: 1;}
+    100% { transform: scale(1) rotate(0); opacity: 1;}
+}
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+    background: transparent;
+    margin: 0;
+    display: block;
+}
+.name {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1.25em;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 0.5px;
+    margin-bottom: 0;
+    margin-top: 2px;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    text-shadow: 0 2px 8px #000a;
+}
+.role {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: #23272b;
+    color: #ffffff; /* Azul claro */
+    font-size: 1em;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 2;
+    padding: 4px 18px;
+    border-radius: 12px;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(30,30,30,0.08);
+    display: inline-block;
+    text-align: center;
+    border: 1.5px solid #b5d5f6;
+}
+.role i {
+    color: #ffffff !important;
+    margin-right: 6px;
+}
+.botones {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    width: auto;
+    margin: 18px 0 0 0;
+    position: relative;
+    z-index: 2;
+    justify-content: center;
+}
+.btn-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: #fff;
+    background: linear-gradient(135deg, #23272b 0%, #b5cae1 100%);
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(30,30,30,0.15);
+    border: 2.5px solid #fff;
+    cursor: pointer;
+    position: relative;
+}
+.btn-icon i {
+    filter: none;
+}
+.btn-icon.whatsapp,
+.btn-icon.correo,
+.btn-icon.info {
+    background: linear-gradient(135deg, #f9f9f9 0%, #f3f3f3 100%);
+    color: #000000;
+}
+.btn-icon:hover, .btn-icon:focus {
+    transform: scale(1.18) rotate(-8deg);
+    box-shadow: 0 6px 24px #6cb4ffcc;
+    z-index: 3;
+}
+.qr-frontal {
+    margin-top: 24px;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 100px;
+    background: none;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    box-shadow: none;
+    animation: qr-pop 1.2s 0.3s cubic-bezier(.25,1.5,.5,1) backwards;
+}
+@keyframes qr-pop {
+    0% { transform: scale(0.7) rotate(-8deg); opacity: 0; }
+    60% { transform: scale(1.08) rotate(2deg); opacity: 1;}
+    100% { transform: scale(1) rotate(0); opacity: 1;}
+}
+.qr-frontal img {
+    width: 84px;
+    height: 84px;
+}
+.botones-qr {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 18px;
+    margin-bottom: 10px;
+}
+.qr-mini img {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    background: #fff;
+    padding: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+/* Responsive */
+@media (max-width: 900px) {
+    .carnet-container {
+        grid-template-columns: 1fr;
+        max-width: 340px;
+    }
+}
+@media (max-width: 600px) {
+    .carnet-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 98vw;
+    }
+    .carnet {
+        width: 98vw;
+        min-width: 180px;
+        min-height: 420px;
+        height: auto;
+    }
+    .logo {
+        width: 90vw;
+        max-width: 180px;
+    }
+    .logo img {
+        width: 80vw;
+        max-width: 160px;
+    }
+    .botones-qr {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .qr-mini img {
+        width: 48px;
+        height: 48px;
+    }
+}
+@media (max-width: 400px) {
+    .logo {
+        width: 48px;
+        height: 48px;
+    }
+    .logo img {
+        width: 38px;
+        height: 38px;
+    }
+    .qr-frontal {
+        width: 60px;
+        height: 60px;
+    }
+    .qr-frontal img {
+        width: 48px;
+        height: 48px;
+    }
+}
+/* Animación solo en hover para PC */
+@media (hover: hover) and (pointer: fine) {
+    .carnet:hover {
+        transform: scale(1.12);
+        box-shadow: 0 16px 40px 0 rgba(0,0,0,0.25), 0 2px 8px 0 #616161;
+        z-index: 10;
+    }
+}
+
+/* Agrega esto en tu CSS global o header.css */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 2.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+.whatsapp-float:hover {
+  background-color: #20ba5a;
+  color: #fff;
+  text-decoration: none;
+}
+@media (max-width: 600px) {
+  .whatsapp-float {
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+    bottom: 15px;
+    right: 15px;
+  }
+}

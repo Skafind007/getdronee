@@ -3,77 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" rel="preload" href="img/icono.png" sizes="192x192">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-    <link rel="stylesheet" href="estilo.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/estilo_index.css">
+    <title>Gadget Drone - Inspección Aérea</title>
+    <meta name="description" content="Expertos en drones, inspección industrial, fotogrametría y soluciones tecnológicas. Descubre nuestros servicios y equipos de última generación.">
+    <meta name="keywords" content="drones, inspección, fotogrametría, servicios, tecnología, Bogotá, Colombia, Gadget Drone">
+    <meta name="author" content="Gadget Drone">
+
+    <meta property="og:title" content="Gadget Drone | Inspección Aérea">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Expertos en drones, inspección industrial, fotogrametría y soluciones tecnológicas. Descubre nuestros servicios y equipos de última generación.">
 </head>
 <body>
-    <header>
-  <div class="logo">
-    <img src="img/logo.jpg" alt="Gadget Drone Logo" />
-  </div>
-  <nav>
-    <ul>
-      <li><a href="#" class="active">Home</a></li>
-      <li><a href="#">Nosotros</a></li>
-      <li><a href="#">Equipos</a></li>
-      <li><a href="#">Servicios ▼</a></li>
-      <li><a href="#">Contacto</a></li>
-    </ul>
-  </nav>
-  <button class="btn-cotizacion">Obtén una cotización</button>
+<header>
+    <div class="logo">
+        <img src="img/logo.jpg" alt="Gadget Drone Logo" />
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active" >Home</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li class="dropdown">
+                <a href="equipos.html"  >Equipos ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="matrice300.html">Matrice 300 RTK</a></li>
+                    <li><a href="elios2.html">Elios 2</a></li>  
+                    <li><a href="wintra.html">Wingtra</a></li>  
+                    <li><a href="autel.html">Drone v200 CHC con sensor Lidar</a></li>   
+                    <li><a href="mavic2.html">Mavic Air 2 S</a></li>   
+                    <li><a href="avata2.html">Avata 2</a></li>                
+                    <li><a href="camaraSen.html">Cámara con sensor multiespectral</a></li>
+                    <li><a href="camarah20t.html">Cámara H20 T</a></li>
+                    <!--<li><a href="sensorGas.html">Sensor de gases</a></li>--> 
+                    <li><a href="AntenaGns.html">Antena GNSS de posicionamiento</a></li>
+                    <li><a href="MedidorEsp.html">Medidor de espesor de drones</a></li>
+          
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" >Servicios ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="ser_inspecciones.html">Inspecciones</a></li>
+                    <li><a href="ser_capacitacion.html">Capacitación</a></li>
+                    <li><a href="ser_consultoria.html">Consultoría y asesoría aeronáutica</a></li>
+                    <li><a href="ser_suministros.html">Suministros, aeronáutico e industrial</a></li>
+                    <li><a href="ser_produccion_grabacion.html">Producción y grabación en paradas de plantas industriales</a></li>
+                 
+                </ul>
+            </li>
+            <li><a href="logros.html">Logros</a></li>
+            <li id="especial"><a href="contactanos.html">Contacto</a></li>
+            <li id="li-cotizacion">
+              <button class="btn-cotizacion" onclick="window.location.href='formulario.html'">Obtén una cotización</button>
+            </li>
+        </ul>
+    </nav>
+    <button class="menu-toggle" aria-label="Abrir menú">
+        <i class="fas fa-bars"></i>
+    </button>
 </header>
 
 <main>
 
-
-
   <!-- SLIDER PRINCIPAL -->
   <section class="slider">
     <div class="slides">
-      <div class="slide" style="background:#000;">
-
-       <img src="4.Camara-H20T.jpg" alt="">
-
-        <div class="slide-content">
-          <h2>Gadget Drone</h2>
-          <div class="btn-group">
-            <a href="#">Mas informacion</a>
-
-          </div>
-        </div>
-      </div>
+   
       <div class="slide" style="background:#000000;">
-        <img src="2.helios.jpg" alt="DJI Flip" />
+        <img src="img/FondoM.png" alt="Matrice 300 RTK" />
         <div class="slide-content">
           <h2>Matrice 300 RTK</h2>
-
           <div class="btn-group">
-            <a href="#">Mas informacion</a>
-
+            <a href="matrice300.html">Mas informacion</a>
           </div>
         </div>
       </div>
       <div class="slide" style="background:#000000;">
-        <img src="3.Yuneec-Typhoon-H.jpg" alt="Osmo Action 5 Pro" />
+        <img src="img/FONDOELIOS.png" alt="Elios 2" />
         <div class="slide-content">
           <h2>Elios 2</h2>
-
           <div class="btn-group">
-            <a href="#">Mas informacion</a>
-
+            <a href="elios2.html">Mas informacion</a>
           </div>
         </div>
       </div>
-          <div class="slide" style="background:#eee;">
-        <img src="5.Camara-con-sensor-multiespectral-Micasense.jpg" alt="Osmo Action 5 Pro" />
+      <div class="slide" style="background:#000000;">
+        <img src="img/FONDOWING.png" alt="Wingtra" />
         <div class="slide-content">
-          <h2>Cámara H20T</h2>
-
+          <h2>Wingtra</h2>
           <div class="btn-group">
-            <a href="#">Mas informacion</a>
-
+            <a href="wintra.html">Mas informacion</a>
+          </div>
+        </div>
+      </div>
+      <div class="slide" style="background:#000000;">
+        <img src="img/descargar.png" alt="Autel" />
+        <div class="slide-content">
+          <h2>Drone v200 CHC con sensor Lidar</h2>
+          <div class="btn-group">
+            <a href="autel.html">Mas informacion</a>
+          </div>
+        </div>
+      </div>
+      <div class="slide" style="background:#000000;">
+        <img src="img/FONDOAIR.png" alt="Mavic Air 2 S" />
+        <div class="slide-content">
+          <h2>Mavic Air 2 S</h2>
+          <div class="btn-group">
+            <a href="mavic2.html">Mas informacion</a>
+          </div>
+        </div>
+      </div>
+      <div class="slide" style="background:#000000;">
+        <img src="img/FONDOAVATA.png" alt="Avata 2" />
+        <div class="slide-content">
+          <h2>Avata 2</h2>
+          <div class="btn-group">
+            <a href="avata2.html">Mas informacion</a>
+          </div>
+        </div>
+      </div>
+      <div class="slide" style="background:#000000;">
+        <img src="img/FONDOMULTI.png" alt="Cámara con sensor multiespectral" />
+        <div class="slide-content">
+          <h2>Cámara con sensor multiespectral</h2>
+          <div class="btn-group">
+            <a href="camaraSen.html">Mas informacion</a>
+          </div>
+        </div>
+      </div>
+      <div class="slide" style="background:#000000;">
+        <img src="img/FONDOH20T.png" alt="Cámara H20 T" />
+        <div class="slide-content">
+          <h2>Cámara H20 T</h2>
+          <div class="btn-group">
+            <a href="camarah20t.html">Mas informacion</a>
+          </div>
+        </div>
+      </div>
+      <!--
+      <div class="slide" style="background:#000000;">
+        <img src="img/slider_sensor_gases.jpg" alt="Sensor de gases" />
+        <div class="slide-content">
+          <h2>Sensor de gases</h2>
+          <div class="btn-group">
+            <a href="sensorGas.html">Mas informacion</a>
+          </div>
+        </div>
+      </div> -->
+      <div class="slide" style="background:#000000;">
+        <img src="img/ANTENAFONDO.png" alt="Antena GNSS de posicionamiento" />
+        <div class="slide-content">
+          <h2>Antena GNSS de posicionamiento</h2>
+          <div class="btn-group">
+            <a href="AntenaGns.html">Mas informacion</a>
+          </div>
+        </div>
+      </div>
+      <div class="slide" style="background:#000000;">
+        <img src="img/FONDOMED.png" alt="Medidor de espesor de drones" />
+        <div class="slide-content">
+          <h2>Medidor de espesor de drones</h2>
+          <div class="btn-group">
+            <a href="MedidorEsp.html">Mas informacion</a>
           </div>
         </div>
       </div>
@@ -82,114 +178,162 @@
     <div class="arrow arrow-right">&#10095;</div>
   </section>
 
+  <!-- SECCION DE PRESENTACION -->
+  <section class="presentacion_section">
+    <div class="presentacion_container">
+      <h1 class="presentacion_titulo">Alta precisión y máxima eficiencia: así es como trabajamos en Gadget Drone.</h1>
+      <div class="presentacion_cont-video" style="position:relative;">
+        <video id="video1" class="presentacion_video" src="img/video_index.mp4" autoplay muted playsinline ></video>
+        <video id="video2" class="presentacion_video" src="img/video3.mp4" muted playsinline ></video>
+      </div>
+    </div>
+  </section>
+
   <!-- SERVICIOS -->
  <section class="services-section">
-  <h2>Servicios.</h2>
+  <br>
+  <h2>Servicios</h2>
   <div class="services-container">
-    <div class="service-card">
-
-      <h3>Mejora la seguridad</h3>
-      <p>Evita la entrada en espacios confinados y el trabajo en altura durante las inspecciones visuales.</p>
+    <div class="service-card service-card--hidden">
+      <h3>INSPECCIONES</h3>
+     
+      <div class="service-card-img-container">
+        <img class="service-card_img" src="img/inspeccion_index.jpeg" alt="">
+      </div>
     </div>
-    <div class="service-card">
-
-      <h3>Reduce el tiempo de inactividad</h3>
-      <br><br>
-      <p>Transforma días de inactividad del activo en horas.</p>
+       <div class="service-card service-card--hidden">
+      <h3>LEVANTAMIENTO FOTOGRAMETRICOS</h3>
+     
+      <div class="service-card-img-container">
+        <img class="service-card_img" src="img/fotgra.jpg" alt="">
+      </div>
     </div>
-    <div class="service-card">
-
-      <h3>Reduce costos</h3>
-      <br><br>
-      <p>Reduce los costos de tus inspecciones internas hasta en un 90%.</p>
+      <div class="service-card service-card--hidden">
+      <h3>PRODUCCIÓN Y GRABACIÓN EN PARADA DE PLANTAS INDUSTRIALES</h3>
+      <div class="service-card-img-container">
+        <img class="service-card_img" src="img/produccion_index.jpeg" alt="">
+      </div>
     </div>
-  </div>
+    <div class="service-card service-card--hidden">
+      <h3>CAPACITACION DE UAS INDUSTRIALES</h3>
+     
+      <div class="service-card-img-container">
+        <img class="service-card_img" src="img/servicio_cap.jpg" alt="">
+      </div>
+    </div>
+        <div class="service-card service-card--hidden">
+      <h3>CONSULTORÍA Y ASESORÍA AERONÁUTICA</h3>
+      <div class="service-card-img-container">
+        <img class="service-card_img" src="img/consultoria_index.jpeg" alt="">
+      </div>
+    </div>
+    <div class="service-card service-card--hidden">
+      <h3>SUMINISTROS AERONÁUTICOS E INDUSTRIAL</h3>
+      <div class="service-card-img-container">
+        <img class="service-card_img" src="img/dron_elios_3.jpeg" alt="">
+      </div>
+    </div>
+  
+
+  
 </section>
 
 <!-- PREGUNTAS FRECUENTES -->
 <section class="preguntas-frecuentes">
     <h1 class="preguntas-frecuentes_titulo">Preguntas frecuentes</h1>
     <div class="contenedor">
-        <h2 class="texto-visible">¿Cuanto tarda el envio?</h2>
-        <p class="texto-oculto">El envio tarde de 3 a 5 dias habiles, dependiendo la ubicación.</p>
+        <h2 class="texto-visible">¿Qué tipo de drones son ideales para vuelos en espacios confinados industriales?</h2>
+        <p class="texto-oculto disable">Drones compactos, protegidos con jaulas o estructuras anti-impacto, con estabilización óptica 
+          y sensores de proximidad. Preferiblemente que funcionen sin señal GPS y tengan buena autonomía y resistencia a 
+          interferencias. Marcas como Flyability (Elios) o similares son estándar en inspecciones indoor.</p>
     </div>
     <div class="contenedor">
-        <h2 class="texto-visible">¿Ofrecen garantia de los productos?</h2>
-        <p class="texto-oculto">Sí, todos nuestros productos y servicios tienen garantia.</p>
+        <h2 class="texto-visible">¿Cómo se maneja la pérdida de señal o GPS durante vuelos en zonas industriales?</h2>
+        <p class="texto-oculto disable">Debe anticiparse mediante: rutas preprogramadas o modo manual con control fino, vuelos 
+          asistidos por sensores de visión o ultrasonido, procedimientos de retorno seguro, evaluación previa del entorno 
+          electromagnético, simulacros de pérdida de control incluidos en el plan de emergencia.</p>
     </div>
     <div class="contenedor">
-        <h2 class="texto-visible">¿Puedo realizar devoluciones?</h2>
-        <p class="texto-oculto">Si, aceptamos devoluciones dentro de los primeros 20 dias despues de la compra y cumpliendo con terminos y condiciones.</p>
+        <h2 class="texto-visible">¿Qué altura y distancia están permitidas para vuelos UAS dentro de una planta industrial?</h2>
+        <p class="texto-oculto disable">En operación VLOS, el RAC 100 recomienda no superar los 400 pies (120 m) de altura AGL y 500 metros 
+          de distancia horizontal, salvo autorización especial. En instalaciones privadas, estos límites pueden ajustarse, pero deben 
+          respetarse los márgenes de seguridad establecidos internamente.</p>
     </div>
     <div class="contenedor">
-        <h2 class="texto-visible">¿Duración de bateria de drones?</h2>
-        <p class="texto-oculto">Los drones poseen una excelente bateria y de gran capacidad, pero esta varia dependiendo el modelo.</p>
+        <h2 class="texto-visible">¿Qué documentación debe llevarse en una operación UAS dentro de una planta industrial?</h2>
+        <p class="texto-oculto disable">Registro del operador y licencia del piloto, manual de operaciones del dron, evaluación de riesgo SORA, 
+          permisos internos (HSEQ, logística), checklists de pre-vuelo y post-vuelo, bitácora de vuelo y registro de mantenimiento del equipo.</p>
     </div>
+    <div class="contenedor">
+        <h2 class="texto-visible">¿Qué condiciones debe cumplir un piloto de dron para operar en entornos industriales segun RAC 100?</h2>
+        <p class="texto-oculto disable">El piloto debe estar registrado ante la UAEAC, contar con capacitación técnica específica en operaciones 
+          UAS y dominar los procedimientos de seguridad industrial. Se requiere experiencia en vuelos en zonas críticas, conocimiento en 
+          evaluación de riesgo operacional (SORA) y operación según el Manual de Operaciones aprobado.</p>
+    </div>
+    <div class="contenedor">
+        <h2 class="texto-visible">¿Qué consideraciones debe tener el piloto al volar drones en exteriores dentro de plantas industriales?</h2>
+        <p class="texto-oculto disable">Debe: respetar las restricciones del espacio aéreo (Zonas R o P si aplican), mantener línea de vista visual (VLOS), 
+          evitar zonas ATEX o con emisiones sin autorización, coordinar con personal operativo y de seguridad, tener plan de vuelo, rutas y puntos 
+          de emergencia definidos.</p>
+    </div>
+    <div class="contenedor">
+        <h2 class="texto-visible">¿Se necesita permiso de la Aeronáutica Civil para volar drones en espacios confinados o interiores industriales?</h2>
+        <p class="texto-oculto disable">No. Las operaciones en espacios confinados están exceptuadas del control del espacio aéreo, por lo tanto no requieren 
+          autorización de la Aeronáutica Civil (según RAC 100). Sin embargo, deben cumplirse protocolos internos estrictos: permisos HSEQ, control de 
+          riesgos eléctricos y estructurales, señalización, y uso de drones aptos para vuelo sin GPS y en zonas estrechas.</p>
+    </div>
+
+    
+    
 </section>
 
 
 </main>
-
+<!-- FOOTER -->
 <footer>
   <div class="footer-container">
     <div class="footer-info">
       <h3>Contacto</h3>
       <ul>
         <li><i class="fas fa-map-marker-alt"></i> Cll 22 A #72B- 48,Bogota,Colombia</li>
-        <li><i class="fas fa-phone"></i> +57 300 123 4567</li>
-        <li><i class="fas fa-envelope"></i>info@gadgetdrone.com</li>
+        <li><i class="fas fa-phone"></i> +57 310 3000119</li>
+        <li><i class="fas fa-envelope"></i>comercial@gadgetdrone.com.co</li>
+        <li><i class="fas fa-envelope"></i>tecnico@gadgetdrone.com.co</li>
+    
       </ul>
     </div>
     <div class="footer-info">
       <h3>Enlaces rápidos</h3>
       <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Servicios</a></li>
-        <li><a href="#">Nosotros</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="equipos.html">Equipos</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contactanos.html">Contacto</a></li>
       </ul>
     </div>
     <div class="footer-info">
       <h3>Síguenos</h3>
       <div class="footer-social">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.facebook.com/gadget.drone" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      
+        <a href="https://www.instagram.com/gadgetdroneservices/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/channel/UCu-uaLV8NTIUCe0j4xFhq3Q" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
       </div>
     </div>
   </div>
   <p class="footer-copy">&copy; Copyright © 2025 Gadget Drone | Powered by Gadget Drone.</p>
 </footer>
+<a href="https://wa.me/573103000119" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
 
-<script>
+<!-- SCRIPTS -->
+<script src="js/slider.js"></script>
+<script src="js/responsive_menu.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="js/animacion_index.js"></script>
+<script src="js/videos_index.js"></script>
+<script src="js/animacion_preguntas.js"></script>
 
-  
-
-
-  // JavaScript para slider principal
-  const slides = document.querySelector('.slides');
-  const slideCount = document.querySelectorAll('.slide').length;
-  const prev = document.querySelector('.arrow-left');
-  const next = document.querySelector('.arrow-right');
-  let currentIndex = 0;
-
-  function updateSlide() {
-    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-  }
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % slideCount;
-    updateSlide();
-  }
-  function prevSlide() {
-    currentIndex = (currentIndex - 1 + slideCount) % slideCount;
-    updateSlide();
-  }
-  next.addEventListener('click', nextSlide);
-  prev.addEventListener('click', prevSlide);
-
-  // autoplay
-  setInterval(nextSlide, 6000);
-</script>
 </body>
 </html>
